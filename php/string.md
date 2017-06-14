@@ -34,7 +34,7 @@
   if(strstr($_POST['email'],'@')===false){
       print 'There was no @ in the email address!';
   }
-  
+
   ```
 
   strpos和strstr两者的区别主要是：如果查找失败，则会返回false，如果成功就会返回第一次出现的位置。因为第一次出现的位置可能是0，所以需要使用===来进行判断。strpos查找性能强，但是对中文的支持不好，而strstr相反。
@@ -196,3 +196,286 @@
     don't play zone defense agaist the 76-ers
     ```
     扩展：具体参考http://www.php.net/str-replace
+
+#### 控制大小写
+
+* 问题：
+希望将字符串中的字母全部改为大小写，或者一部分改为大小写。
+
+    解决方案 :
+    使用ucfirst(),ucwords(),strtoupper(),strtolower()等来改变。
+
+    示例 :
+
+    ```
+    //ucfirst()将一个字符串中第一个字母改为大写
+    //ucwords()将一个字符串中每一个单词首字母大写
+    //strtoupper将字符串的字母全部改为大写
+    //strtolower将字符串的字母全部改为小写
+
+    print ucfirst("don't play zone defense agaist the 76-ers");
+    print ucwords("don't play zone defense agaist the 76-ers");
+    print strtoupper("don't play zone defense agaist the 76-ers");
+    print strtolower("don't play zone defense agaist the 76-ers");
+
+    //输出
+    Don't play zone defense agaist the 76-ers
+    Don't Play Zone Defense Agaist The 76-ers
+    DON'T PLAY ZONE DEFENSE AGAIST THE 76-ERS
+    don't play zone defense agaist the 76-ers
+    ```
+    扩展：具体参考http://www.php.net/strtoupper
+
+#### 字符串中的内插函数和表达式
+
+* 问题：
+希望在一个字符串中包含执行某个函数或表达式的结果。
+
+    解决方案 :
+    使用字符串连接操作符（.）。
+
+    示例 :
+
+    ```
+    //双引号的字符串中可以直接解析变量，对象属性，数组元素等。通常使用{}来分隔。
+
+    print "You owe {$amounts['payment']} immediately";
+    print "My circle's diameter is ".$circle->getDiameter().' inches';
+
+    //输出
+    You owe $10 immediately
+    My circle's diameter is 10 inches
+    ```
+
+#### 去除字符串首尾的空格
+
+* 问题：
+希望从字符串开头和末尾删除空白符。例如在验证用户输入时，可能需要清理数据。
+
+    解决方案 :
+    使用ltrim(),rtrim(),trim()。ltrime() 函数删除字符串左边的空白符，trim() 函数删除两边的空白符。
+
+    示例 :
+
+    ```
+    //默认的空白符有：换行，回车，空格，水平和垂直制表符以及null
+    //需要去除双引号、制表符、空格,可以采用多步实现的方式。
+
+    $str="\" <a>penta kill</a>  \"";
+    $str=trim($str,'"'); //先去除一些特殊字符
+    $str=trim($str);    //单独去除空白字符
+    print $str;
+
+    //输出
+    <a>penta kill</a>
+    ```
+
+    扩展：具体参考http://www.php.net/trim
+
+#### 生成逗号分隔的数据
+
+* 问题：
+希望将数据格式化为逗号分隔值(CSV)，从而可以由电子表格或者数据库导入。
+
+    解决方案 :
+    可以使用fputcsv() 函数可以根据一个数据数组生成一个CSV格式的文件行
+
+    示例 :
+
+    ```
+    //示例
+    $lists=array( array("aaa","bbb","ccc"),
+                  array("111","222","333"),
+                  array("A","B"));
+    $fp=fopen("file.csv","w");
+    //如果要输出到显示器中来,需要使用到一种特殊的输出流 php://output
+    //$fp=fopen("php://output","w");
+
+    foreach($lists as $flieds){
+        //将每一行数据写入到文件中去
+        fputcsv($fp,$flieds);
+    }
+    fclose($fp);
+
+    //输出
+    aaa,bbb,ccc
+    111,222,333
+    A,B
+    ```
+    扩展：具体参考http://www.php.net/fputcsv
+
+#### 解析逗号分隔的数据
+
+* 问题：
+已经有逗号分隔值格式的数据，希望将记录和字段抽取为可以在PHP中处理的一种格式。
+
+    解决方案 :
+    先用fopen()函数打开文件，使用fgetcsv()读取数据，返回值按照逗号分隔的数组
+
+    示例:
+
+    ```
+    //示例
+    $fp=fopen('file.csv','r');
+    while($data_line=fgetcsv($fp)){
+        for($i=0;$i<cout($data_line);$i++){
+            echo $data_line[$i]." ";
+        }
+        echo "<br/>";
+    }
+
+    //输出
+    aaa bbb ccc
+    111 222 333
+    A B
+    ```
+
+    扩展：具体参考http://www.php.net/fgetcsv
+
+#### 生成固定宽度字段数据记录
+
+* 问题：
+需要格式化数据记录，使得每个字段占据指定数目的字符。
+
+    解决方案 :
+    使用pack()并提供一个格式字符串，它要指定一个空格填充字符串序列。
+
+    示例 :
+
+    ```
+    //示例
+    $lists=array( array("aaa","bbb","ccc"),
+                  array("111","222","333"));
+    foreach($lists as $list ){
+        print pack("A3A4A4",$list[0],$list[1],$list[2]);
+    }
+
+    //输出
+    aaa bbb ccc
+    111 222 333
+    ```
+
+    如果需要使用其他字符填充，可以使用substr()来确保字段不会太长，str_pad()来确保字段不会过短。
+
+    示例 :
+
+    ```
+    //示例
+    $lists=array( array("aaa","bbb","ccc"),
+                  array("111","222","333"));
+    foreach($lists as $list ){
+      $s1=str_pad(substr($list[0],0,5),5,'.');
+      $s2=str_pad(substr($list[1],0,5),5,'.');
+      $s3=str_pad(substr($list[1],0,5),5,'.');
+      print "$s1s2s3\n";
+    }
+
+    //输出
+    aaa..bbb..ccc..
+    111..222..333..
+    ```
+
+    扩展：具体参考http://www.php.net/pack
+
+#### 解析固定宽度字段数据记录
+
+* 问题：
+需要格式化数据记录，使得每个字段占据指定数目的字符。
+
+    解决方案 :
+    使用substr()或者unpack()函数。
+
+    示例 :
+
+    //示例
+    $binarydata = "AA\0A";
+    $array = unpack("c2chars/nint", $binarydata);
+    foreach ($array as $key => $value){
+        echo "\$array[$key] = $value <br>\n";
+    }
+
+    //输出
+    $array[chars1] = 65
+    $array[chars2] = 65
+    $array[int] = 65
+
+    扩展：具体参考http://www.php.net/unpack
+
+#### 分解字符串
+
+* 问题：
+需要将一个字符串分解为片段。例如，希望访问用户在一个< textarea>表单提交的各行文本。
+
+    解决方案 :
+    使用explode()或者preg_split()函数。
+
+    示例 :
+
+    ```
+    //explode适用于一些固定的字符分隔的字符串
+    //preg_split适用于多种字符分隔的字符串
+
+    $words = explode(',','My,sentens,is,not,very,complicated');
+    $lines = preg_split('/x/i','31 inches x 22 inches X 9 inches');
+    print $words;
+    print $lines;
+
+    //输出
+    My sentens is not very complicated
+    31 inches  22 inches  9 inches
+    ```
+    扩展：具体参考http://www.php.net/explode
+
+#### 使文本在指定行长自动换行
+
+* 问题：
+需要实现字符串自动换行。例如，希望使用< pre>标记显示文本，但是要求不能出现水平滚动条。
+
+    解决方案 :
+    使用wordwrap()函数。
+
+    示例 :
+
+    ```
+    //wordwrap 默认75个字符换行，默认保留单词的完整性
+    $str="Four score and seven years";
+    print wordwrap($str,9,"\n\n");//设置9个字符换行
+
+    //输出
+    Four score
+
+    and seven
+
+    years
+    ```
+    扩展：具体参考http://www.php.net/wordwrap
+
+#### 加入或者去除反斜杠
+
+* 问题：有时需要对字符进行自动转义，比如sql语句中addcslashes（string str, stringcharlist）：第1个参数str为待操作的原始字符串，第2个参数charlist说明需要在原始串的哪些字符前加上字符‘\’。
+
+stripcslashes（string str）：去掉字符串中的‘\’。
+
+    示例 :
+
+    ```
+    <?php
+    $init_str ="select * from Books where name = 'php手册'";
+    echo$init_str."#<br>";
+    $new_str =addcslashes($init_str,"'");  //在单引号前加反斜杠
+    echo $new_str."#<br>";
+    $init_str2= stripcslashes($new_str);
+    echo $init_str2."#<br>";
+    ?>
+    ```
+
+#### 转义HTML标签,过滤标签
+
+* 问题：为了安全问题有时需要转义或者过滤html和javascript标签
+
+    常用函数 :
+
+    htmlspecialchars   一些常用的HTML元素转换为显示字符串。
+    htmlentities   HTML元素转换为显示字符串。
+    html_entity_decode  把显示字符串转化为HTML元素。
+    strip_tags  剥去字符串中的html,xml,javascript以及php的标签
