@@ -30,10 +30,11 @@
   ```
   if(strpos($_POST['email'],'@qq.com')===false){
     print 'There was no @qq.com in the email address!';
-}
-if(strstr($_POST['email'],'@')===false){
-    print 'There was no @ in the email address!';
-}
+  }
+  if(strstr($_POST['email'],'@')===false){
+      print 'There was no @ in the email address!';
+  }
+  
   ```
 
   strpos和strstr两者的区别主要是：如果查找失败，则会返回false，如果成功就会返回第一次出现的位置。因为第一次出现的位置可能是0，所以需要使用===来进行判断。strpos查找性能强，但是对中文的支持不好，而strstr相反。
