@@ -460,7 +460,6 @@ stripcslashes（string str）：去掉字符串中的‘\’。
 
 示例 :
 
-    ```
     <?php
     $init_str ="select * from Books where name = 'php手册'";
     echo$init_str."#<br>";
@@ -469,7 +468,6 @@ stripcslashes（string str）：去掉字符串中的‘\’。
     $init_str2= stripcslashes($new_str);
     echo $init_str2."#<br>";
     ?>
-    ```
 
 
 #### 转义HTML标签,过滤标签
