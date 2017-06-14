@@ -1,6 +1,6 @@
 ## Personal Daily Note
 
-#### writing by GoukouRuri
+#### writed by GoukouRuri
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
 [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
@@ -13,7 +13,7 @@
 
 ## 前言
 
-为什么把php,mysql,redis放在前三位？因为php/mysql/redis基础是一个当代phper的根基。   -- write by GoukouRuri at 2017.6.14 
+为什么把php,mysql,redis放在前三位？因为php/mysql/redis基础是一个当代phper的根基。   -- writed at 2017.6.14
 
 ## 备注
 
