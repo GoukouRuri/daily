@@ -342,6 +342,7 @@
 
     示例 :
 
+
     ```
     //示例
     $lists=array( array("aaa","bbb","ccc"),
@@ -358,6 +359,7 @@
     如果需要使用其他字符填充，可以使用substr()来确保字段不会太长，str_pad()来确保字段不会过短。
 
     示例 :
+
 
     ```
     //示例
@@ -456,7 +458,7 @@
 
 stripcslashes（string str）：去掉字符串中的‘\’。
 
-    示例 :
+示例 :
 
     ```
     <?php
@@ -468,6 +470,7 @@ stripcslashes（string str）：去掉字符串中的‘\’。
     echo $init_str2."#<br>";
     ?>
     ```
+
 
 #### 转义HTML标签,过滤标签
 
