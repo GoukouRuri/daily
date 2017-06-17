@@ -17,7 +17,9 @@
    - 个人的使用的过滤规则
 
      ```
-*.bmp;*.css;*.eot;*.fla;*.gif;*.hprof;*.jpg;*.png;*.pyc;*.pyo;*.rbc;*.swf;*.ttf;*.woff;*.zip;*2013;*2014;*~;.DS_Store;.git;.hg;.svn;CVS;RCS;SCCS;__pycache__;_svn;adtest;batch;bin;cache;css;csssprite;doc;docs;flash;font;fonts;gmap;icon;image;images;inc;js;log;logs;oa_login;openads;pear;player;qqMaps;rcs;scripts;style;test;tools;touch;upload;uploads;
+     
+      *.bmp;*.css;*.eot;*.fla;*.gif;*.hprof;*.jpg;*.png;*.pyc;*.pyo;*.rbc;*.swf;*.ttf;*.woff;*.zip;*2013;*2014;*~;.DS_Store;.git;.hg;.svn;CVS;RCS;SCCS;__pycache__;_svn;adtest;batch;bin;cache;css;csssprite;doc;docs;flash;font;fonts;gmap;icon;image;images;inc;js;log;logs;oa_login;openads;pear;player;qqMaps;rcs;scripts;style;test;tools;touch;upload;uploads;
+
      ```
 
 * 添加版本控制忽略的文件--也可以自己写入规则进行忽略
