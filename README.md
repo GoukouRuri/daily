@@ -172,9 +172,9 @@ fixing    | 查漏补缺修改中
     - http2
     - websocket
 
-- 计算机基础(doing)
+- linux基础(doing)
 
-  - [linux常用命令](https://github.com/TIGERB/easy-tips/blob/master/linux/command.md)
-  - shell
+  - [linux常用命令](https://github.com/GoukouRuri/daily/tree/master/linux)
+  - [shell简单入门](https://github.com/GoukouRuri/daily/blob/master/linux/shell.md)
 
 - 高并发相关(not-start)
