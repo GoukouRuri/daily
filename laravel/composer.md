@@ -31,4 +31,27 @@
 - 具体使用及相关配置请查看官网
 
    http://docs.phpcomposer.com/
+   
+### 关于下载源码后如何运行
+
+example:
+
+   ```git clone git@github.com:GouKouRuri/cms.git```
+  
+
+- 下载源码后安装相关依赖包和库
+ 
+   ```composer install```
+   
+- laravel下配置.env和生成key
+
+   ```cp .env.example .env```
+   
+   ```php artisan key:generate```
+   
+- 在config/database.php配置数据库
+- 迁移建表
+
+  ```php artisan migrate```
+
   
