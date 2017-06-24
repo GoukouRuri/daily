@@ -22,6 +22,10 @@
   
   ```git config --global user.email lovenico2016@gmail.com```
   
+- 配置push远程版本
+
+  ```git config --global push.default simple```
+  
   
 
 
