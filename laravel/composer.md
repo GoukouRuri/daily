@@ -53,5 +53,9 @@ example:
 - 迁移建表
 
   ```php artisan migrate```
+  
+  
+
+
 
   
