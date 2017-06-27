@@ -115,7 +115,7 @@
       -o 两个条件满足其中一个
       -type 根据文件类型查找(f文件 d目录 l软链接文件)
       -inum 根据i节点查找
-      -exec/-ok [命令] {} \; 对查找的结果进行操作
+      -exec/-ok [命令] {} \; 对查找的结果进行操作(-ok会询问)
       ```
       
       ```find /etc -name *init*```
@@ -136,7 +136,44 @@
       
       ```find /etc -iname init* -a -type d```  
       
-      ```find /etc -iname intt* -exec ls -l {} \;```
+      ```find /etc -iname intt* -a type f -exec ls -l {} \;
+      
+* 其他文件搜索命令
+  
+  - locate 在资料库中查找(资料库会自动定期更新，但是新建的文件短时间内不会被收录无法搜索)
+  
+    - locate [文件名]
+    - locate locate 可以查看资料库
+    - updatedb 手动更新资料库(tmp等文件下是不是被收录)
+    - locate -i [文件名]   不区分大小写查找文件
+    
+  - which 搜索命令所在的目录及别名信息
+  
+    example: which ls
+    
+    别名：例如cp,rm等都是有别名,rm=rm -i 本身不询问,别名是询问
+
+  - whereis 搜索命令所在的目录以及帮助文档所在的路径
+  
+  - grep 在文件内容内查找关键词对应的行
+  
+    ```grep -i muliuser /etc/inittab``` 不区分大小写查找
+    
+    ```grep -v ^# /etc/inittab``` 去掉行首以#开头的行,去注释非常方便
+    
+* 帮助命令
+  
+  - man 原意manual, 1是命令帮助，5是配置文件的帮助，优先显示命令的帮助
+  
+    查看配置文件或者命令的帮助信息,跟more文本操作一样
+    
+    ```man ls```
+    
+    ```man services```
+    
+    ```man 5 passwd```  查看passwd配置文件的帮助
+     
+    
       
       
           
