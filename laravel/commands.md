@@ -7,7 +7,7 @@
 
   ```php artian make:controller [controller_name]```
   
-- 快速生成模型
+- 快速生成表的orm模型
 
   ```php artian make:model [model_name]```
   
