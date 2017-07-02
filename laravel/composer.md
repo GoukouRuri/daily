@@ -55,7 +55,7 @@ example:
   ```php artisan migrate```
   
   
-
+- composer dump 按照配置环境重新加载
 
 
   
