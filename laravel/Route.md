@@ -115,3 +115,21 @@
   });```
   
 - CSRF 保护[https://docs.golaravel.com/docs/5.1/routing/]
+
+- URL的调用[http://www.cnblogs.com/fx2008/p/3560738.html]
+
+  - 使用URL::to()生成URL
+  
+    ```
+    Route::get('example',function()
+    {
+        return URL::to('another/route', array('foo','bar'));
+    });
+    ```
+    生成的URL为http://myapp.dev/another/route/foo/bar,如需将HTTP协议变为HTTPS，则用
+    ```
+    URL::to('another/route', array('foo','bar'),true);
+    URL::secure('another/route', array('foo','bar'));
+    ```
+    
+    
