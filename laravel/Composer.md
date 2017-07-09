@@ -43,6 +43,10 @@ example:
  
    ```composer install```
    
+- 更新包(composer.json修改后执行)
+
+   ```composer update```
+   
 - laravel下配置.env和生成key
 
    ```cp .env.example .env```
@@ -56,6 +60,14 @@ example:
   
   
 - composer dump 按照配置环境重新加载
+
+- Laravel项目的app文件夹下的所有目录都使用 PSR-4自动加载标准被自动加载，所以你可以在其中随心所欲地创建需要的目录
+  ```
+   "psr-4": {
+     "App\\": "app/"  
+   },
+   ```
+   App是app/的映射名称可以改成自己想要的
 
 
   
