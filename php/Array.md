@@ -6,7 +6,7 @@
 - [array_count_values](http://php.net/manual/zh/function.array-count-values.php) 返回一个数组： 数组的键是 array 里单元的值； 数组的值是 array 单元的值出现的次数。
 - [array_fill_keys](http://php.net/manual/zh/function.array-fill-keys.php) 使用 value 参数的值作为值，使用 keys 数组的值作为键来填充一个数组。
 - [array_fill](http://php.net/manual/zh/function.array-fill.php) 用 value 参数的值将一个数组填充 num 个条目，键名由 start_index 参数指定的开始。
-- []()
+
 
 
 
