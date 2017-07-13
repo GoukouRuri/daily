@@ -17,7 +17,8 @@
 * 为了确保代码的易读性，本手册还介绍了一些伪类型： 
   - mixed（混合类型）  
   - number（数字类型）  
-  - [callback](http://php.net/manual/zh/language.types.callable.php)（回调类型）  
+  - [callback](http://php.net/manual/zh/language.types.callable.php)（回调类型）
+     -  在函数中注册有多个回调内容时(如使用 [call_user_func()](http://php.net/manual/zh/function.call-user-func.php) 与 [call_user_func_array()](http://php.net/manual/zh/function.call-user-func-array.php))，如在前一个回调中有未捕获的异常，其后的将不再被调用。
 
 * 以及伪变量 $...
 * 如果想查看某个表达式的值和类型，用 var_dump() 函数。  
