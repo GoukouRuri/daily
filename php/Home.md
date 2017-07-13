@@ -17,7 +17,7 @@
 * 为了确保代码的易读性，本手册还介绍了一些伪类型： 
   - mixed（混合类型）  
   - number（数字类型）  
-  - callback（回调类型）  
+  - [callback](http://php.net/manual/zh/language.types.callable.php)（回调类型）  
 
 * 以及伪变量 $...
 * 如果想查看某个表达式的值和类型，用 var_dump() 函数。  
