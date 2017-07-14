@@ -1,5 +1,7 @@
 ### phpstorm食用指南
 
+  - 官网手册地址https://www.jetbrains.com/help/phpstorm/configuring-line-separators.html#separator_settings
+
 * 主题的安装for windows
    - config/colors下放置主题文件
 * 关闭右上方四个浏览器图标
@@ -30,6 +32,7 @@
     - 全局搜素文件--------shift+ctrl+alt+N
     - 搜索匹配的内容-------shift+ctrl+F
     - 全项目范围查找类--------------ctrl+N
+    - 查看类的继承关系-------------[Show Diagram](https://laravel-china.org/topics/3187/how-to-use-phpstorm-to-view-class-inheritance-relationships)
 * 常用的提示快捷键
     - ctrl+J-------------代码提示
     - ctrl+p-------------方法参数提示
