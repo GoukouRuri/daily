@@ -28,6 +28,29 @@
 ###### [魔术常量](http://php.net/manual/zh/language.constants.predefined.php)
 
   > 有八个魔术常量它们的值随着它们在代码中的位置改变而改变,这些特殊的常量不区分大小写
+  
+###### 运算符 
+  - instanceof
+   
+    - 相关: 
+      - is_a()
+      - getclass()
+   - clone
+   
+###### 流程控制
+
+  - [declare && ticks](http://blog.csdn.net/udefined/article/details/24333333)
+    
+    实际上可用tick来进行调试，性能测试，实现简单的多任务，或者做一些后台的I/O操作等等。
+
+###### [函数](http://php.net/manual/zh/language.functions.php)
+
+  - 自定义函数
+  - 返回值
+  - 可变函数
+  
+###### 类和对象---please go to Object.md
+  
    
    
    
