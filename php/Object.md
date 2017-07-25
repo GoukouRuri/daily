@@ -19,6 +19,9 @@
 > ###### [访问控制](http://php.net/manual/zh/language.oop5.visibility.php)(修饰符)
 
   - 对属性或方法的访问控制，是通过在前面添加关键字 public（公有），protected（受保护）或 private（私有）来实现的。被定义为公有的类成员可以在任何地方被访问。被定义为受保护的类成员则可以被其自身以及其子类和父类访问。被定义为私有的类成员则只能被其定义所在的类访问。
+  - public 表示全局，类内部外部子类都可以访问；
+  - private表示私有的，只有本类内部可以使用,不可以被子类继承；
+  - protected表示受保护的，只有本类或子类或父类中可以访问；
   
 > ###### [对象继承](http://php.net/manual/zh/language.oop5.inheritance.php)
 
