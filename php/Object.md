@@ -36,6 +36,48 @@
 
   - static 关键字来定义静态方法和属性
   
+> ###### [抽象类](http://php.net/manual/zh/language.oop5.abstract.php)和[接口](http://php.net/manual/zh/language.oop5.interfaces.php)
+
+  - 参考资料
+    
+    - http://www.jb51.net/article/81641.htm
+    - http://www.imooc.com/article/13925?block_id=tuijian_wz
+
+> ###### [Trait](http://php.net/manual/zh/language.oop5.traits.php)
+
+  - 参考资料
+  
+    - http://oomusou.io/php/php-trait/
+ 
+> ###### [匿名类](http://php.net/manual/zh/language.oop5.anonymous.php)
+
+> ###### [方法重载](http://php.net/manual/zh/language.oop5.overloading.php)
+
+> ###### [遍历对象](http://php.net/manual/zh/language.oop5.iterations.php)
+  
+  - PHP 5 提供了一种定义对象的方法使其可以通过单元列表来遍历，例如用 foreach 语句。默认情况下，所有可见属性都将被用于遍历。
+  
+> ###### [魔术方法](http://php.net/manual/zh/language.oop5.magic.php)
+
+  - __sleep()和__wakeup()
+  
+> ###### [Final 关键字](http://php.net/manual/zh/language.oop5.final.php)
+
+  - PHP 5 新增了一个 final 关键字。如果父类中的方法被声明为 final，则子类无法覆盖该方法。如果一个类被声明为 final，则不能被继承。
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   
   
   
