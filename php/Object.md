@@ -63,7 +63,16 @@
   
 > ###### [Final 关键字](http://php.net/manual/zh/language.oop5.final.php)
 
-  - PHP 5 新增了一个 final 关键字。如果父类中的方法被声明为 final，则子类无法覆盖该方法。如果一个类被声明为 final，则不能被继承。
+  - PHP 5 新增了一个 final 关键字。如果父类中的方法被声明为 final，则子类无法覆盖该方法。如果一个类被声明为 final，则不能被继承。 
+
+> ###### [对象复制clone](http://php.net/manual/zh/language.oop5.cloning.php)
+
+  - 参考资料
+  
+    - http://itopic.org/php-clone.html
+  
+  
+  
 
 
 
