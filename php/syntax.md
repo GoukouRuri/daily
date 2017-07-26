@@ -65,8 +65,20 @@
 
   - 如何自定义异常处理类,通过继承内置的Exception类------参考来源(http://php.net/manual/zh/language.exceptions.extending.php)
   
+###### [生成器](http://php.net/manual/zh/language.generators.overview.php)
 
-    
+  - yield关键字
+  - 生成器提供了一种更容易的方法来实现简单的对象迭代(遍历对象或者数组)，相比较定义类实现 Iterator 接口的方式，性能开销和复杂性大大降低,减少了内存的占用。
+
+###### [引用的解释](http://php.net/manual/zh/langref.php)
+
+###### [预定义变量](http://php.net/manual/zh/reserved.variables.php)
+
+###### [SPL异常](http://php.net/manual/zh/spl.exceptions.php)
+
+###### [SPL接口和预定义类](http://php.net/manual/zh/reserved.interfaces.php)
+
+###### [上下文（Context）选项和参数](http://php.net/manual/zh/context.socket.php)
     
     
     
