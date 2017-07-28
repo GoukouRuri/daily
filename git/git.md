@@ -25,6 +25,9 @@
 
   ```git config --global push.default simple```
   
+- 添加远程分支
+    
+  
 - github
 
   ###### …or create a new repository on the command line
@@ -43,6 +46,7 @@
   ```
   git remote add origin https://github.com/GoukouRuri/cms.git
   git push -u origin master
+  
   ```
   
 
