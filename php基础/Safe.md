@@ -21,7 +21,7 @@
      
    - [以 Apache 模块安装时](http://php.net/manual/zh/security.apache.php)
    
-   - 会话（Session）安全
+   - [会话（Session）安全](http://php.net/manual/zh/book.session.php)
      - 基本用法
      
        - 通过为每个独立用户分配唯一的会话 ID，可以实现针对不同用户分别存储数据的功能。 会话通常被用来在多个页面请求之间保存及共享信息。 一般来说，会话 ID 通过 cookie 的方式发送到浏览器，并且在服务器端也是通过会话 ID 来取回会话中的数据。 如果请求中不包含会话 ID 信息，那么 PHP 就会创建一个新的会话，并为新创建的会话分配新的 ID。
@@ -34,7 +34,10 @@
        
          PHP 脚本执行完毕之后，会话会自动关闭。 同时，也可以通过调用函数 session_write_close() 来手动关闭会话。
      - 保持 HTTP 会话管理的安全是重要的。会话安全相关内容描述章节在[Session 模块](http://php.net/manual/zh/book.session.php) 文档下的[会话安全](http://php.net/manual/zh/session.security.php)部分。
-     - 传送会话ID
+     - [传送会话ID](http://php.net/manual/zh/session.idpassing.php)
        
-       - 
+       - 有两种方式用来传送会话 ID
+       
+         - Cookies
+         - URL 参数
 
