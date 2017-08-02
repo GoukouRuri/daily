@@ -13,7 +13,7 @@
 
 ## 前言
 
-为什么把php,mysql,redis放在前三位？因为php/mysql/redis基础是一个当代phper的根基。   -- writed at 2017.6.14
+为什么把php,mysql,redis放在前三位？因为php/mysql/redis是基础,当然linux,mongodb,javascript,html5,css3等也是需要的   -- writed at 2017.6.14
 
 ## 备注
 
