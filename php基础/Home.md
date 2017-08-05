@@ -24,7 +24,7 @@
 * 如果想查看某个表达式的值和类型，用 var_dump() 函数。  
   
   如果只是想得到一个易读懂的类型的表达方式用于调试，用 gettype() 函数。要查看某个类型，不要用 gettype()，而用 is_type 函数。以下是一些范例：
-  ```
+  ```php
   <?php
   $a_bool = TRUE;   // a boolean
   $a_str  = "foo";  // a string
