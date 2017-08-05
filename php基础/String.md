@@ -4,7 +4,8 @@
 
 * PHP字符串是字节序列,是二进制安全的，也就是说字符串中可以包含null。PHP字符串的大小只受内存限制，通常情况下，PHP字符串都是ASCII，如果要处理一些额外的字符（例如UTF-8编码字符），需要进一步扩展。PHP中字符串的定义方式通常有三种：单引号、双引号、heredocs 下面是PHP初始化字符串的三种方式。
 
-  ```
+  ```php
+   <?php
    $s1='I have gone to the store.';
 
    $s2="I have gone to the store.";
@@ -27,7 +28,8 @@
 
   示例 :
 
-  ```
+  ```php
+  <?php
   if(strpos($_POST['email'],'@qq.com')===false){
     print 'There was no @qq.com in the email address!';
   }
@@ -49,7 +51,8 @@
   解决方案 : 使用substr()抽取字符串
 
   示例 :
- ```
+ ```php
+ <?php
  //标准格式
  $substring = substr($string,$start,$length);
  //示例
@@ -68,7 +71,8 @@
     使用substr_replace()替换子串
 
     示例 :
-    ```
+    ```php
+    <?php
     //标准格式
     $res_str = substr_replace($old_string,$new_string,$start,$length);
     //说明：在old中的start位置开始的length长度用new字符串来替换
@@ -95,7 +99,8 @@
     使用for循环处理字符串中的各个字节
 
     示例 :
-    ```
+    ```php
+    <?php
     //统计字符串中元音字母的个数
     //strstr返回子串第一次出现开始的字符串，例如子串为‘I’，那么返回IOU
     //strpos返回子串第一次出现的位置，例如子串为‘I’，那么返回7
@@ -122,7 +127,8 @@
     使用strrev()按字节反转
 
     示例 :
-    ```
+    ```php
+    <?php
     //按字节反转
     print strrev('This is not a palindrome.');
 
@@ -149,7 +155,8 @@
 
     示例 :
 
-    ```
+    ```php
+    <?php
     //带默认参数的函数
     //mt_rand(min,max)生成随机数包含min和max在内
     function str_rand($length=32,$charset='0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'){
@@ -178,7 +185,8 @@
 
     示例 :
 
-    ```
+    ```php
+    <?php
     //ucfirst()将一个字符串中第一个字母改为大写
     //ucwords()将一个字符串中每一个单词首字母大写
     //strtoupper将字符串的字母全部改为大写
@@ -207,7 +215,8 @@
 
     示例 :
 
-    ```
+    ```php
+    <?php
     //ucfirst()将一个字符串中第一个字母改为大写
     //ucwords()将一个字符串中每一个单词首字母大写
     //strtoupper将字符串的字母全部改为大写
@@ -236,7 +245,8 @@
 
     示例 :
 
-    ```
+    ```php
+    <?php
     //双引号的字符串中可以直接解析变量，对象属性，数组元素等。通常使用{}来分隔。
 
     print "You owe {$amounts['payment']} immediately";
@@ -257,7 +267,8 @@
 
     示例 :
 
-    ```
+    ```php
+    <?php
     //默认的空白符有：换行，回车，空格，水平和垂直制表符以及null
     //需要去除双引号、制表符、空格,可以采用多步实现的方式。
 
@@ -282,7 +293,8 @@
 
     示例 :
 
-    ```
+    ```php
+    <?php
     //示例
     $lists=array( array("aaa","bbb","ccc"),
                   array("111","222","333"),
@@ -314,7 +326,8 @@
 
     示例:
 
-    ```
+    ```php
+    <?php
     //示例
     $fp=fopen('file.csv','r');
     while($data_line=fgetcsv($fp)){
