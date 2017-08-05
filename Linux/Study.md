@@ -447,6 +447,22 @@
 * 用户模板目录(新建用户时在用户家目录自动生成的相关的文件)
 
   - /etc/skel
+  
+* 用户管理命令
+
+  - 添加新用户
+  
+    ```useradd [选项] 用户名```
+    - 具体修改的配置文件和生成的目录、文件如下
+    
+      ```
+      /etc/password
+      /etc/shadow
+      /etc/group
+      /etc/gshadow
+      /home/用户名
+      /var/spool/mail/用户名
+      ```
       
      
     
