@@ -463,7 +463,21 @@
       /home/用户名
       /var/spool/mail/用户名
       ```
+    - 参数
+    
+      ```
+      -u UID         手工指定用户uid
+      -d 家目录       手工指定用户的家目录
+      -g 组名         手工指定用户的用户组
+      -G 组名         手工指定用户的附属组
+      -s shell       手工指定用的shell，默认是bash shell,在/bin/bash
+      ```
+    - 用户默认值的配置文件
+    
+      `/etc/default/useradd`
       
+      `/etc/login.defs`
+  
      
     
       
