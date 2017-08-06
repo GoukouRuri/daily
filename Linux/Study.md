@@ -623,6 +623,20 @@
   setfacl -m u:liming:rx /project
   setfacl -m g:group1:rx /project
   ```
+
+* 最大有效权限和删除ACL权限
+
+  - mask 最大有效权限，实际权限为赋予的权限和最大有效权限相与的结果
+    - `setfacl -m m:rx /project`  设置mask权限，只影响ACL权限，正常的ugo权限不影响
+  - 删除ACL权限
+    - 删除指定用户和用户组权限
+    
+      `setfacl -x u:liming:rx /project`
+      `setfacl -x g:group1:rx /project`
+      
+    - 删除文件的所有ACL权限
+    
+      `setfacl -b /project`
   
   
     
