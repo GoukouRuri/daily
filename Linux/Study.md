@@ -585,6 +585,46 @@
   - 把用户添加到组里 `gpasswd -a 用户名 用户组`
   
   - 把用户从组里删除  `gpasswd -a 用户名 用户组`
+  
+> ### 权限管理
+
+* ACL权限(因为文件和目录只能有一个所属用户和所属组,所以不能完全满足要求)
+
+  - 查看分区ACL权限是否开启
+  
+    `dumpe2fs -h 分区mul`  在default mount options选项中查看是否支持ACL
+    
+    `df -h` 查看分区使用情况
+    
+  - 没有开启时临时开启ACL权限,重启会失效  `mount -o remount,acl 分区`
+  - 永久开启ACL权限,需要修改/etc/fstab文件    ps：不建议修改这个文件，一旦写错，系统开机加载就会崩溃起不来
+  
+    - 这个文件是开机系统自动挂载的文件
+    
+      ```
+      / 根分区
+      /boot   boot分区
+      /home   home分区
+      swap   交换分区
+
+      ```
+* 查看和设定ACL权限
+
+  - `getfacl 文件名`           查看ACL权限
+  - `setfacl [选项] 文件名`     设置ACL权限
+  - example:
+  ```
+  useradd liming
+  groupadd tgroup
+  groupadd group1
+  mkdir /project
+  chown root:tgroup /project
+  chmod 770 /project
+  setfacl -m u:liming:rx /project
+  setfacl -m g:group1:rx /project
+  ```
+  
+  
     
     
      
