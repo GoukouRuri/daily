@@ -568,6 +568,23 @@
       - '-'：不切换用户身份，只是借用一次身份来执行mingl
       
         example：`su - root -c "useradd user1"` 
+        
+  - 添加用户组 `groupadd 用户组名`
+  
+    - -g GID     手动指定组ID
+    
+  - 修改用户组  `groupmod [选项] 用户组`     ps:不建议使用修改
+  
+    - -g GID    修改组ID
+    - -n 新组名  修改组名
+    
+      example: `groupmod -n group1 group2`  将group2修改成group1
+      
+  - 删除用户组   `groupdel 用户组`        ps：初始组和初始用户是依存的，如果用户组有初始用户则无法删除，附加组可以删除不影响
+  
+  - 把用户添加到组里 `gpasswd -a 用户名 用户组`
+  
+  - 把用户从组里删除  `gpasswd -a 用户名 用户组`
     
     
      
