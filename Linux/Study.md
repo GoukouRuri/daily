@@ -637,6 +637,13 @@
     - 删除文件的所有ACL权限
     
       `setfacl -b /project`
+      
+* 默认的ACL权限和递归的ACL权限    ps：只能赋予给目录，虽然给文件也不会报错但不会起作用
+
+  - -R 递归目录设置
+    `setfacl -m u:liming:rx /project`
+  - 默认的ACL权限指的是在目录里新建的文件自动设置的权限
+    `setfacl -m d:u:liming:rx /project`
   
   
     
