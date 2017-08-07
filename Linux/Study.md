@@ -647,9 +647,9 @@
   
 * 文件特殊权限
 
-  - SetUID  
-  - SetGID
-  - Sticky BIT
+  - SetUID  赋予文件
+  - SetGID  赋予文件或者目录
+  - Sticky BIT  赋予目录，粘着位的作用是让共享目录时，用户只能修改和删除自己建的，不能删改别人的
   
   `chmod 4775 /project`
   `chmod u+s /project`
