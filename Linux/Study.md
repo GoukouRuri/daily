@@ -645,7 +645,18 @@
   - 默认的ACL权限指的是在目录里新建的文件自动设置的权限
     `setfacl -m d:u:liming:rx /project`
   
+* 文件特殊权限
+
+  - SetUID  
+  - SetGID
+  - Sticky BIT
   
+  `chmod 4775 /project`
+  `chmod u+s /project`
+  `4代表SUID,2代表SGID,1代表sticky BIT
+   必须有执行权限才能让赋予的特殊权限起作用，必须给可执行程序或者二进制文件赋予，作用是让用户在执行文件时短时间获得属主身份，比如passwd命令
+  `
+  `系统根目录或关键目录应该严格控制写权限，文件特殊权限不能轻易赋予，是非常不安全的权限`
     
     
      
