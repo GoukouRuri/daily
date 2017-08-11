@@ -32,3 +32,15 @@
        var cr = document.getElementById("cr");          // dom对象
        var $cr = $(cr);                              // jquery对象
     ```
+    
+> ### 解决jquery库和其他库
+
+* jquery库所有的插件都限制在它自己的命名空间中,不会和其他冲突,只有快捷方式`$`会出现冲突
+
+  - jquery库在其他库之后加载
+  
+   `jQuery.noConflict();`   // 将$移交给其他库，jquery则使用jQeury来引用自身
+   
+  - 其他库在jquery之后加载
+  
+    $已经在其他库时，jquery则使用jQeury来引用自身
