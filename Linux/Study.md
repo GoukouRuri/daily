@@ -426,8 +426,70 @@
 * RPM包的检验
 
   - rpm -V 包名
-    
   
+* RPM包`默认`安装位置
+
+  ```
+   /etc/           配置文件安装目录
+   /usr/bin/       可执行的命令安装目录
+   /usr/lib/       程序可使用的函数库保存的位置
+   /usr/share/doc  基本的软件使用手册保存的位置
+   /usr/share/man  帮组文件保存的位置
+  ```
+  
+* RPM包安装的服务既可以使用绝对路径来管理，也可以使用系统服务命令(前提是默认路径安装)，如redhat系启动apache服务`service httpd start`,源码安装的可以使用绝对路径来管理
+  
+* 源码包安装
+
+  - 安装前的准备
+  
+    - 安装C语言编辑器gcc
+    - 下载源码包(一般是C语言写的)
+    
+  - 安装时的注意事项
+  
+    - 源代码应该保存的位置（推荐的位置，如果想存其他地方也是随便了，只是不好管理)
+      
+      `/usr/local/src`
+      
+    - 软件应该安装的位置
+    
+      `/usr/local`
+      
+    - 如何确定安装过程报错
+    
+      - 安装过程停止
+      - 出现error、waring、no等提示
+      
+    - 编译与安装步骤
+    
+      - 进入解压缩后的包目录
+      
+        example: ```cd /usr/local/src/httpd-2.2.9```
+        
+        进入后可以看到基本上都会有`INSTALL`和`README`，一个是安装说明,一个是使用说明,不清楚源代码包的时候可以查看它们来了解
+        
+      - ./configure  软件配置与检查
+      
+        - 定义需要的功能选项，其中配置安装路径是必须的`-- prefix=安装路径`
+        - 检查系统环境是否符合安装要求
+        - 把定义好的功能选项和检查系统环境的信息写入Makefile文件,用于后续的编译
+        
+      - make    编译(将源码翻译成机器语言)
+      
+        - 直到这一步时我们仍然尚未对安装目录和源码位置外的其他位置写入任何文件，此时编译错误或者不想安装，可以使用`make clean`清除编译产生的临时文件
+      
+      - make install 编译安装(此时才真正向安装位置写入文件)
+      
+* 源码包启动
+      
+  - 查看`INSTALL`文件查看启动命令
+       
+* 源码包的卸载
+
+  - 不需要卸载命令,直接删除安装目录即可，不会产生任何遗留的垃圾文件
+ 
+ 
 > ### 用户和用户组管理
   
 * 用户的家目录
@@ -447,7 +509,177 @@
 * 用户模板目录(新建用户时在用户家目录自动生成的相关的文件)
 
   - /etc/skel
+  
+* 用户管理命令
+
+  - 添加新用户
+  
+    ```useradd [选项] 用户名```
+    - 具体修改的配置文件和生成的目录、文件如下
+    
+      ```
+      /etc/password
+      /etc/shadow
+      /etc/group
+      /etc/gshadow
+      /home/用户名
+      /var/spool/mail/用户名
+      ```
+    - 参数
+    
+      ```
+      -u UID         手工指定用户uid
+      -d 家目录       手工指定用户的家目录
+      -g 组名         手工指定用户的用户组
+      -G 组名         手工指定用户的附属组
+      -s shell       手工指定用的shell，默认是bash shell,在/bin/bash
+      ```
+    - 用户默认值的配置文件
+    
+      `/etc/default/useradd`
       
+      `/etc/login.defs`
+  
+  - 修改用户密码
+    
+    - passwd 用户名
+    
+  - 修改用户信息
+  
+    - usermod [选项] 用户名
+  
+  - 修改用户密码状态
+  
+    ```chage -d 0 用户名```        这样系统就认为用户密码从来没有修改过，在用户登录时强制用户重设密码
+    
+  - 删除用户命令
+  
+    - ```userdel -r 用户名```  删除用户并且连着家目录一起删除
+    
+  - 查看用户ID
+  
+    `id 用户名`
+    
+  - 切换用户身份
+  
+    - su [选项] 用户名
+    
+      - `-`:选项只使用-则是连带着用户环境变量也一起，不建议省略这个选项，否则环境变量仍然没有更改,`env` 可以查看当前的用户变量
+      - '-'：不切换用户身份，只是借用一次身份来执行mingl
+      
+        example：`su - root -c "useradd user1"` 
+        
+  - 添加用户组 `groupadd 用户组名`
+  
+    - -g GID     手动指定组ID
+    
+  - 修改用户组  `groupmod [选项] 用户组`     ps:不建议使用修改
+  
+    - -g GID    修改组ID
+    - -n 新组名  修改组名
+    
+      example: `groupmod -n group1 group2`  将group2修改成group1
+      
+  - 删除用户组   `groupdel 用户组`        ps：初始组和初始用户是依存的，如果用户组有初始用户则无法删除，附加组可以删除不影响
+  
+  - 把用户添加到组里 `gpasswd -a 用户名 用户组`
+  
+  - 把用户从组里删除  `gpasswd -a 用户名 用户组`
+  
+> ### 权限管理
+
+* ACL权限(因为文件和目录只能有一个所属用户和所属组,所以不能完全满足要求)
+
+  - 查看分区ACL权限是否开启
+  
+    `dumpe2fs -h 分区mul`  在default mount options选项中查看是否支持ACL
+    
+    `df -h` 查看分区使用情况
+    
+  - 没有开启时临时开启ACL权限,重启会失效  `mount -o remount,acl 分区`
+  - 永久开启ACL权限,需要修改/etc/fstab文件    ps：不建议修改这个文件，一旦写错，系统开机加载就会崩溃起不来
+  
+    - 这个文件是开机系统自动挂载的文件
+    
+      ```
+      / 根分区
+      /boot   boot分区
+      /home   home分区
+      swap   交换分区
+
+      ```
+* 查看和设定ACL权限
+
+  - `getfacl 文件名`           查看ACL权限
+  - `setfacl [选项] 文件名`     设置ACL权限
+  - example:
+  ```
+  useradd liming
+  groupadd tgroup
+  groupadd group1
+  mkdir /project
+  chown root:tgroup /project
+  chmod 770 /project
+  setfacl -m u:liming:rx /project
+  setfacl -m g:group1:rx /project
+  ```
+
+* 最大有效权限和删除ACL权限
+
+  - mask 最大有效权限，实际权限为赋予的权限和最大有效权限相与的结果
+    - `setfacl -m m:rx /project`  设置mask权限，只影响ACL权限，正常的ugo权限不影响
+  - 删除ACL权限
+    - 删除指定用户和用户组权限
+    
+      `setfacl -x u:liming:rx /project`
+      `setfacl -x g:group1:rx /project`
+      
+    - 删除文件的所有ACL权限
+    
+      `setfacl -b /project`
+      
+* 默认的ACL权限和递归的ACL权限    ps：只能赋予给目录，虽然给文件也不会报错但不会起作用
+
+  - -R 递归目录设置
+    `setfacl -m u:liming:rx /project`
+  - 默认的ACL权限指的是在目录里新建的文件自动设置的权限
+    `setfacl -m d:u:liming:rx /project`
+  
+* 文件特殊权限
+
+  - SetUID  赋予文件
+  - SetGID  赋予文件或者目录
+  - Sticky BIT  赋予目录，粘着位的作用是让共享目录时，用户只能修改和删除自己建的，不能删改别人的
+  
+  `chmod 4775 /project`
+  `chmod u+s /project`
+  `4代表SUID,2代表SGID,1代表sticky BIT
+   必须有执行权限才能让赋予的特殊权限起作用，必须给可执行程序或者二进制文件赋予，作用是让用户在执行文件时短时间获得属主身份，比如passwd命令
+  `
+  `系统根目录或关键目录应该严格控制写权限，文件特殊权限不能轻易赋予，是非常不安全的权限`
+  
+* 文件系统属性权限 change attribute on a linix file system    ps:作用是防止连带root用户在内的用户的误操作
+
+  - `chattr [+-=][选项] 文件名或者目录`
+  
+    - 选项
+     
+     `i`: 
+       
+       - 如果对文件设置i属性，那么文件将被锁住，只有读权限，不能删除和修改，也不能修改文件属性，最重要的是连root用户也会被限制。
+       - 如果对目录设置i属性，那么目录下可以修改文件属性和数据，但不能新建和删除文件
+     
+     `a`:
+     
+       - 如果对文件设置a属性，那么文件里的原数据将被锁住，只能新增数据，不能删改原来数据
+       - 如果对目录设置a属性，那么只能新建和修改文件，不能删除文件
+       
+  - `lsattr [选项] 文件名`
+  
+    - -d 只显示目录属性，显示目录里文件的属性，和ls命令类似
+    - -a 显示所有文件和目录
+    
+    
      
     
       
