@@ -75,5 +75,28 @@
   
     - [remove()](http://jquery.cuishifeng.cn/remove.html)   删除每个匹配的节点
     - [empty()](http://jquery.cuishifeng.cn/empty.html)    清空每个匹配的节点的内容和子节点
+    
+  - 复制节点
+  - 替换节点
+  - 包裹节点
+  - 遍历节点(children().find().child().parent(),parents(),filter(),nextAll(),prev(),next(),prev
+  all(),siblings(),closest())
+
+* 属性
+
+  - 获取和设置属性(attr())
+  - 删除属性(removeAttr())
+
+- 样式
+  
+  - 获取和设置样式(attr()),将原来的替换成新的class
+  ```
+  <p class="oldclass"></p>
+  $('p').attr('class', 'newclass');
+  ```
+  
+  - 追加样式(addClass())
+  - 移除样式(removeClass())
+  - 是否有样式(hasClass())
 
   
