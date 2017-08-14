@@ -87,7 +87,7 @@
   - 获取和设置属性(attr())
   - 删除属性(removeAttr())
 
-- 样式
+* 样式
   
   - 获取和设置样式(attr()),将原来的替换成新的class
   ```
@@ -98,5 +98,16 @@
   - 追加样式(addClass())
   - 移除样式(removeClass())
   - 是否有样式(hasClass())
+  
+* CSS-DOM操作(css(),height().width(),offset().position(),scrollTop,scrollLeft())
+
+> ### jquery事件和动画
+
+* 绑定事件bind()
+* 合成事件toggle(),hover()
+* 事件冒泡
+  
+  - 多个元素绑定同一类型事件,并且元素之间是嵌套关系，则触发顺序从里到外
+ 
 
   
