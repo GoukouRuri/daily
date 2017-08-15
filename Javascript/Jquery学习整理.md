@@ -107,7 +107,78 @@
 * 合成事件toggle(),hover()
 * 事件冒泡
   
-  - 多个元素绑定同一类型事件,并且元素之间是嵌套关系，则触发顺序从里到外
+  - 概念:多个元素绑定同一类型事件,并且元素之间是嵌套关系，则触发顺序从里到外
+  - 避免事件冒泡引发不必要的问题的解决方法`event.stopPropagation()`
+  
+    ```
+    $(element).bind('click', function(){
+        alert('hello');  
+        event.stopPropagation();  停止事件冒泡
+    })
+    ```
+  - `event.preventDefault()` 阻止默认行为,比如点击submit一般会默认提交，链接会跳转之类都是默认行为
+  - `event.type()` 获取事件类型
+  - `event.target()` 获取事件触发的本身的对象元素
+  - `event.relatedTarget()` 获取事件触发的关联的对象元素
+  - `event.pageX()和event.pageY()`  获取光标相对于页面的x坐标和y坐标
+  - `event.which()` 获取那个按键触发的
+* 移除事件
+  - unbind('事件类型')
+  
+* 模拟事件
+  - trigger()
+    
+* 事件的命名空间,方便事件的管理
+
+* jquery中的动画
+
+  - show()和hide()方法
+  - fadeIn()和fadeOut()方法
+  - slideUp()和slideDown()方法
+  - 自定义动画animate
+  - 动画回调函数
+  - 停止元素的动画stop
+  - 判断元素是否处于动画状态,避免动画积累
+  - 动画队列，链式执行
+  
+> ### jquery对表单、表格的操作以及更多应用
+
+  - 单行文本框和多行文本框
+  - 滚动条
+  - 单选，多选，反选
+  - 下拉框
+  - 表单验证
+  - 表格应用
+    - 单双行
+    - 表格展开与关闭
+    - 表格内容的筛选
+    - 
+  - 选项卡
+  - 网页换肤
+  
+> ### jquery与ajax应用
+
+  - load()方法从web服务器获取静态的数据文件
+  - $.get(),$.post(),$.ajax()方法从web服务器获取动态的数据文件
+  - $.getJSON(),$.getScript()方法动态加载json文件或者js文件
+  - 序列化serialize()和$.param()方法
+  - jquery中ajax的全局事件
+  - 
+  
+> ### jquery官方插件http://plugins.jquery.com
+
+  - 动画插件jquery.color.js
+  - cookie插件jquery.cookie.js
+  - 表单验证插件jquery.validate.js或者jquery.metadata.js
+  - 表单插件jquery.form.js
+  - 动态绑定事件插件(不管是初次加载还是ajax等动态加载出的html元素,只有匹配都会被绑定)
+ 
+> ### jquery扩展
+
+  - $.fn.extend({})
+  - jQuery.extend()
+ 
+  
  
 
   
