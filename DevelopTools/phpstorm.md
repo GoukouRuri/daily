@@ -46,3 +46,5 @@
     - Alt + Delete 安全删除
     - Shift + F6 为所选文件重命名
     - pin tab 将文件标签固定
+    
+* 激活码`http://blog.csdn.net/u013939884/article/details/68921462`
