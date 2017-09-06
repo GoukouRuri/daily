@@ -772,5 +772,9 @@
       - fdisk -l 查看U盘设备文件名(因为U盘文件名是自动分配,不像光盘那样是固定的)
       - mount -t vfat /dev/sdb? /mnt/usb
       
+    - 如何支持NTFS系统
+  
+  - fdisk分区
+      
           
       
