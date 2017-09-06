@@ -756,8 +756,25 @@
     - `mount [-a]` 根据配置文件/etc/fstab内容进行自动挂载，不能将U盘,光驱,软盘等进行自动挂载，一般假如没有会导致系统启动崩溃 
     
     - `mount -o remount,noexec /home`  重新挂载/home分区,并且使用noexec权限,这样会导致即使文件有执行权限也无法执行,因为分区不支持。比较适合给一些用来给用户上传文件的分区,避免用户上传一些恶意脚本文件执行
+   
+  - 挂载光盘和U盘
+
+    - 挂载光盘
     
+      - `mkdir /mnt/cdrom/`   #创建挂载点
+      - `mount -t isd9600 /dev/cdrom /mnt/cdrom`  #挂载光盘
+      - `umount 设备文件名或挂载点`   #卸载光盘
+         
+         - `umount /mnt/cdrom`
+         
+    - 挂载U盘（注意：unix系统及分支默认是不支持NTFS文件系统的）
+    
+      - fdisk -l 查看U盘设备文件名(因为U盘文件名是自动分配,不像光盘那样是固定的)
+      - mount -t vfat /dev/sdb? /mnt/usb
       
+    - 如何支持NTFS系统
+  
+  - fdisk分区
       
           
       
