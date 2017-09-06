@@ -775,6 +775,9 @@
     - 如何支持NTFS系统
   
   - fdisk分区
+  - /etc/fstab文件修复  
+  
+    - `mount -o remount,rw /`
       
           
       
