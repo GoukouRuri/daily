@@ -1,1 +1,0 @@
-- realpath()  返回绝对路径。http://www.w3school.com.cn/php/func_filesystem_realpath.asp
