@@ -1,0 +1,2 @@
+- realpath()  返回绝对路径。http://www.w3school.com.cn/php/func_filesystem_realpath.asp
+- list()    把数组中的值赋给一些变量   http://www.w3school.com.cn/php/func_array_list.asp
