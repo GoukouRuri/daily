@@ -391,6 +391,7 @@ WITH_READLINE
   
   修改server里location部分
   ```
+    user www www    //nginx以www用户身份和www用户组运行
     location / {
          root   /var/www;
          index   index.html  index.htm  index.php;
@@ -404,7 +405,11 @@ WITH_READLINE
         include fastcgi_params;
     }
   ```
-  
+  修改php-fpm.d/www.conf
+  ```
+  user www
+  group www
+  ``` 
 - 初始化配置文件
 
   - `cp /usr/local/php7/etc/php-fpm.conf.default  /usr/local/php7/etc/php-fpm.conf`
