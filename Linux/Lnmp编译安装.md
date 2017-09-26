@@ -390,7 +390,8 @@ WITH_READLINE
   `vim /etc/nginx/nginx.conf`
   
   修改server里location部分
-  ```location / {
+  ```
+    location / {
          root   /var/www;
          index   index.html  index.htm  index.php;
      }
