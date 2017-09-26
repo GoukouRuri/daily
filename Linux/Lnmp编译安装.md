@@ -42,10 +42,11 @@
 - 创建启动脚本,在/etc/init.d/nginx写入shell脚本
 
   - 
-`#!/bin/sh`
-`# nginx - this script starts and stops the nginx daemon`
-`#`
 ```sh
+#!/bin/sh
+# nginx - this script starts and stops the nginx daemon
+#
+
 # chkconfig:   - 85 15 
 # description:  Nginx is an HTTP(S) server, HTTP(S) reverse \
 #               proxy and IMAP/POP3 proxy server
@@ -168,7 +169,7 @@ case "$1" in
         echo $"Usage: $0 {start|stop|status|restart|condrestart|try-restart|reload|force-reload|configtest}"
         exit 2
 esac
-    ```
+```    
  
 - 更改脚本权限为755
 
