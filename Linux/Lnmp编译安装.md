@@ -16,8 +16,9 @@
 
 - 编译nginx
 
-  - `cd nginx-1.10.3`
-  - ```./configure \
+  `cd nginx-1.10.3`
+  ```
+  ./configure \
   --prefix=/usr/local \
   --sbin-path=/usr/sbin/nginx \
   --conf-path=/etc/nginx/nginx.conf \
@@ -35,13 +36,13 @@
   --http-fastcgi-temp-path=/var/tmp/nginx/fcgi/ \
   --http-uwsgi-temp-path=/var/tmp/nginx/uwsgi \
   --http-scgi-temp-path=/var/tmp/nginx/scgi \
-  --with-pcre```
+  --with-pcre
+  ```
 
   - `make && make install`
 
 - 创建启动脚本,在/etc/init.d/nginx写入shell脚本
 
-  - 
 ```sh
 #!/bin/sh
 # nginx - this script starts and stops the nginx daemon
