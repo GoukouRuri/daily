@@ -41,11 +41,11 @@
 
 - 创建启动脚本,在/etc/init.d/nginx写入shell脚本
 
-  - ```sh
-#!/bin/sh
-#
-# nginx - this script starts and stops the nginx daemon
-#
+  - 
+`#!/bin/sh`
+`# nginx - this script starts and stops the nginx daemon`
+`#`
+```sh
 # chkconfig:   - 85 15 
 # description:  Nginx is an HTTP(S) server, HTTP(S) reverse \
 #               proxy and IMAP/POP3 proxy server
