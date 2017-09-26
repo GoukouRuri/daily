@@ -25,6 +25,11 @@
     
 ### `cat -A [文件名]` 可以查看到文件所有字符，包括隐藏字符（如换行符）
 
+### 管理进程
+
+  - `ps aux | grep 'nginx'`   查看进程
+  - `kill -9 进程pid`   强制终止进程
+   
 ###  将windos下编译的文件转化为unix下编译的
     `yum -y install dos2unix
      dos2unix [文件名]
