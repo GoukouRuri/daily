@@ -428,6 +428,16 @@ WITH_READLINE
   echo '<?php echo phpinfo();' > index.php
   `
 
+- 补充添加mysql和php环境变量,写入配置文件中永久生效,在/etc/profile文件的末尾加入两行代码
+
+`PATH=$PATH:/usr/local/php7/bin:/usr/local/mysql/bin`             // 具体是自己安装的路径
+`export PATH`
+
+保存退出后执行source /etc/profile是配置生效
+echo $PATH 查看当前环境变量是否已经生效
+
+***
+
 至此完成lnmp编译安装,相关依赖不用编译安装，是因为不需要也没必要，即便编译也是使用默认配置,而且编译安装依赖十分繁多
 
 -- The End     Writed By GoukouRuri
