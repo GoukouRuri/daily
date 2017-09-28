@@ -438,6 +438,27 @@ echo $PATH 查看当前环境变量是否已经生效
 
 ***
 
+- 如何在远程vps搭建的环境允许外网访问数据库（方便个人使用,生产环境的不建议开发给外部入口）
+
+  - 设置防火墙,允许mysql的3306端口,修改/etc/sysconfig/iptables,添加下面的一行代码
+  
+    `-A INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT`
+    
+     执行service iptables restart 重启防火墙
+     
+  - 配置远程连接授权
+  
+    ```
+    mysql -uroot -p
+    use mysql;
+    grant all privileges  on *.* to root@'%' identified by "root";
+    update user set host = '%' where user = 'root';
+    ```
+    可能会出现`ERROR 1062 (23000): Duplicate entry '%-root' for key 'PRIMARY' `保错,不用管
+    执行flush privileges;此时远程连接可以使用了
+
+*** 
+
 至此完成lnmp编译安装,相关依赖不用编译安装，是因为不需要也没必要，即便编译也是使用默认配置,而且编译安装依赖十分繁多
 
 -- The End     Writed By GoukouRuri
