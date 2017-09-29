@@ -1,6 +1,8 @@
 ### phpstorm食用指南
 
   - 官网手册地址https://www.jetbrains.com/help/phpstorm/configuring-line-separators.html#separator_settings
+  
+  - 参考整理来源http://blog.csdn.net/u012906135/article/details/48130801
 
 * 主题的安装for windows
    - config/colors下放置主题文件
