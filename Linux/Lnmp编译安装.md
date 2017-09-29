@@ -446,7 +446,7 @@ echo $PATH 查看当前环境变量是否已经生效
     
      执行service iptables restart 重启防火墙
      
-  - 配置远程连接授权
+  - 配置远程连接授权 （一般不会出现到这部，除非是自己建的用户，否则root权限很大）
   
     ```
     mysql -uroot -p
