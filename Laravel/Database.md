@@ -10,7 +10,7 @@
     
 ### Eloquent的使用(orm模型操作数据库)[https://docs.golaravel.com/docs/5.1/eloquent-collections/]
 
-  - 生成模型
+  - 生成模型（如果是放在model目录里,需要修稿config目录的service.php文件里的路径）
   
     ```php artian make:model [model_name]```
     
