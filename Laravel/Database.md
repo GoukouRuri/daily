@@ -12,8 +12,12 @@
 
   - 生成模型（如果是放在model目录里,需要修稿config目录的service.php文件里的路径）
   
-    ```php artian make:model [model_name]```
-    
+    ```php artian make:model Models/Article -m```  同时会生成模型和migration迁移文件
+  
+  - 生成迁移文件
+  
+    `php artisan make:migration create_users_table --create=users`
+    `php artisan make:migration add_votes_to_users_table --table=users`
   - model文件里的配置[https://docs.golaravel.com/docs/5.1/eloquent/]
   
     ```
