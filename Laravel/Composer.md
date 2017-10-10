@@ -47,6 +47,9 @@ example:
 
    ```composer update```
    
+- 添加包
+   `composer require "foo/bar:1.0.0"`
+   
 - laravel下配置.env和生成key
 
    ```cp .env.example .env```
