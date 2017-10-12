@@ -1,13 +1,3 @@
-### 数据库操作[https://docs.golaravel.com/docs/5.1/queries/]
-
-  - pdo连接
-  
-    ```$pdo = DB::connection()->getPdo();```
-    
-  - DB类连接
-  
-    ```$users = DB::table('user')->where('user_id', '=' ,1)->get();```
-    
 ### Eloquent的使用(orm模型操作数据库)[https://docs.golaravel.com/docs/5.1/eloquent-collections/]
 
   - 生成模型（如果是放在model目录里,需要修稿config目录的service.php文件里的路径）
@@ -52,3 +42,19 @@
     php artisan migrate:refresh
     php artisan migrate:refresh --seed
     ```回滚所有迁移操作，重新执行迁移
+    
+### 监控查询事件[https://laravel.com/docs/5.5/database]  
+
+  - 如果要接收应用程序执行的每个SQL查询，可以使用该listen方法。此方法对于记录查询或调试很有用。您可以在服务提供商中注册您的查询监听器
+  
+### 自动事务和手动事务处理[https://laravel.com/docs/5.5/database]
+
+### 数据库操作[https://docs.golaravel.com/docs/5.1/queries/]
+
+  - pdo连接
+  
+    ```$pdo = DB::connection()->getPdo();```
+    
+  - DB类连接
+  
+    ```$users = DB::table('user')->where('user_id', '=' ,1)->get();```
