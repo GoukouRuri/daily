@@ -50,11 +50,139 @@
 ### 自动事务和手动事务处理[https://laravel.com/docs/5.5/database]
 
 ### 数据库操作[https://docs.golaravel.com/docs/5.1/queries/]
-
-  - pdo连接
-  
-    ```$pdo = DB::connection()->getPdo();```
     
-  - DB类连接
+  - 原生sql使用
+   
+  - DB类连接、查询构造器使用
   
-    ```$users = DB::table('user')->where('user_id', '=' ,1)->get();```
+    ```php
+    <?php
+    // 获取所有行(返回的是对象组成的数组)
+    $users = DB::table('user')->get();
+    // 或者也可以根据条件获取多行
+    $users = DB::table('user')->where('user_id', '=' ,1)->get();
+    foreach ($users as $user) {
+        echo $user->name;
+    }
+
+    // 获取单条数据(返回一个对象)
+    $user = DB::table('users')->where('name', 'John')->first();
+    echo $user->name;
+
+    /*------不想获取整行数据,只想取某列的值怎么办------*/
+    // 只获取单条数据中的某列
+    $email = DB::table('users')->where('name', 'John')->value('email');
+    echo $email;
+
+    // 只获取多行数据的单列
+    $titles = DB::table('roles')->pluck('title');
+    foreach ($titles as $title) {
+        echo $title;
+    }
+
+    // 只获取多行数据的两列(返回数据, 第一个参数为值, 第二个为键,参数最多两个)
+    $roles = DB::table('roles')->pluck('title', 'name');
+    //$roles = DB::table('roles')->lists('title', 'name');
+    foreach ($roles as $name => $title) {
+        echo $title;
+    }
+    
+    // 那么如何获取自己指定的列呢,需要用select()指定
+    $users = DB::table('users')->select('name', 'email as user_email')->get();
+    // 如果已经有了还想加怎么办
+    $users = $users->addSelect('age')->get(); 
+    
+    // 分块查询
+    DB::table('users')->orderBy('id')->chunk(100, function ($users) {
+        // Process the records...
+    
+        return false; //返回false来阻止进一步处理的块Closure
+    });
+
+    // 复合函数count，max，min，avg，和sum
+
+    $users = DB::table('users')->count();
+    $price = DB::table('orders')->max('price');
+    $users = DB::table('users')->distinct()->get();
+
+    // 如何配合原始的sql语句来查询呢, 用DB::raw()可以防止sql注入
+    $users = DB::table('users')
+        ->select(DB::raw('count(*) as user_count, status'))
+        ->where('status', '<>', 1)
+        ->groupBy('status')
+        ->get();
+
+    /*------联表查询如何使用------*/
+    // 内联join ,inner join, 第一个参数为联的表,后面参数为联表的相关字段约束
+    $users = DB::table('users')
+                ->join('contacts', 'users.id', '=', 'contacts.user_id')
+                ->join('orders', 'users.id', '=', 'orders.user_id')
+                ->select('users.*', 'contacts.phone', 'orders.price')
+                ->get();
+
+    // 外联中的左联, 第一个参数为联的表,后面参数为联表的相关字段约束
+    $users = DB::table('users')->leftJoin('posts', 'users.id', '=', 'posts.user_id')->get();
+
+    // 联表约束匿名函数化写法
+    DB::table('users')->join('contacts', function ($join) {
+        $join->on('users.id', '=', 'contacts.user_id')->where('contacts.user_id', '>', 5);
+    })->get();
+
+    // 联合查询
+    $first = DB::table('users')
+        ->whereNull('first_name');
+    
+    $users = DB::table('users')
+        ->whereNull('last_name')
+        ->union($first)
+        ->get();
+
+    
+    /*------多种where条件语句------*/
+    // where
+    $users = DB::table('users')
+        ->where('votes', '>=', 100)
+        ->get();
+    
+    $users = DB::table('users')
+        ->where('votes', '<>', 100)
+        ->get();
+    
+    $users = DB::table('users')
+        ->where('name', 'like', 'T%')
+        ->get();
+
+    $users = DB::table('users')->where([
+        ['status', '=', '1'],
+        ['subscribed', '<>', '1'],
+    ])->get();  // 传入数组条件, 但是需要是二维数组形式
+
+    // orWhere, whereBetween, whereNotBetween, whereIn, whereNotIn, whereNull, whereNotNull
+    $users = DB::table('users')
+        ->where('votes', '>', 100)
+        ->orWhere('name', 'John')
+        ->get();
+
+    // 比较时间whereDate, whereMonth, whereDay, whereYear
+    $users = DB::table('users')
+        ->whereDate('created_at', '2016-12-31')
+        ->get();
+
+    $users = DB::table('users')
+        ->whereMonth('created_at', '12')
+        ->get();
+
+    // whereColumn方法可用于验证两列是否相等或者比较
+    $users = DB::table('users')
+        ->whereColumn('first_name', 'last_name')
+        ->get();
+    $users = DB::table('users')
+        ->whereColumn('updated_at', '>', 'created_at')
+        ->get();
+    // whereColumn方法也可以传递多个条件的数组。这些条件将使用and运算符进行连接
+    $users = DB::table('users')
+        ->whereColumn([
+            ['first_name', '=', 'last_name'],
+            ['updated_at', '>', 'created_at']
+        ])->get();
+    ```
