@@ -54,6 +54,8 @@
   - 原生sql使用
    
   - DB类连接、查询构造器使用
+    
+    - 查询语句 
   
     ```php
     <?php
@@ -185,4 +187,120 @@
             ['first_name', '=', 'last_name'],
             ['updated_at', '>', 'created_at']
         ])->get();
+
+    // 组合条件
+    DB::table('users')
+        ->where('name', '=', 'John')
+        ->orWhere(function ($query) {
+            $query->where('votes', '>', 100)
+                  ->where('title', '<>', 'Admin');
+        })
+        ->get();
+    // 等效为select * from users where name = 'John' or (votes > 100 and title <> 'Admin')
+
+    // where从句
+    DB::table('users')
+        ->whereExists(function ($query) {
+            $query->select(DB::raw(1))
+                  ->from('orders')
+                  ->whereRaw('orders.user_id = users.id');
+        })
+        ->get();
+    // 等效为select * from users where exists (select 1 from orders where orders.user_id = users.id)
+
+    // JSON where where子句(需要mysql5.7以上)
+
+    // 排序, 第一个为字段名, 第二个为asc或者desc
+    $users = DB::table('users')
+        ->orderBy('name', 'desc')
+        ->get();
+
+    // 组查询groupby, having
+    $users = DB::table('users')
+        ->groupBy('account_id')
+        ->having('account_id', '>', 100)
+        ->get();
+    // havingRaw方法可用于将原始字符串设置为having子句的值, 下面是查取销售额超过$ 2,500的所有部门
+    $users = DB::table('orders')
+        ->select('department', DB::raw('SUM(price) as total_sales'))
+        ->groupBy('department')
+        ->havingRaw('SUM(price) > 2500')
+        ->get();
+
+    // 分段取数据
+    $users = DB::table('users')->skip(10)->take(5)->get();  //跳过10个开始取5个
+    // 或者用
+    $users = DB::table('users')->offset(10)->limit(5)->get();
+
+    // 条件条款--有时候，只有当其他的事情都是真的时，你可能会希望子句才能应用于查询。例如，where如果传入请求中存在给定的输入值，则可能只需应用语句。您可以使用以下when方法完成此操作
+    $role = $request->input('role');
+    $users = DB::table('users')
+        ->when($role, function ($query) use ($role) {
+            return $query->where('role_id', $role);
+        })
+        ->get();   //该when方法仅在第一个参数时执行给定的Closure true。如果第一个参数是false，Closure将不会被执行
+    // 或者第三个参数为匿名函数, 在第二个不执行的情况下的默认回调动作
+    $sortBy = null;
+    
+    $users = DB::table('users')
+        ->when($sortBy, function ($query) use ($sortBy) {
+            return $query->orderBy($sortBy);
+        }, function ($query) {
+            return $query->orderBy('name');
+        })
+        ->get();
+    ```
+    
+    - 插入语句
+    ```php
+    <?php
+    // insert方法接受列名和值的数组
+    DB::table('users')->insert(
+        ['email' => 'john@example.com', 'votes' => 0]
+    );
+    
+    // 批量插入, insert接受二维数组
+    DB::table('users')->insert([
+        ['email' => 'taylor@example.com', 'votes' => 0],
+        ['email' => 'dayle@example.com', 'votes' => 0]
+    ]);
+    
+    // 如果表有自增的主键,可以获取成功插入一条数据后的主键
+    $id = DB::table('users')->insertGetId(
+        ['email' => 'john@example.com', 'votes' => 0]
+    );
+    ```
+    
+    - 更新语句
+    ```php
+    <?php
+    // update方法与insert方法一样，接受包含要更新的列的列和值对的数组。您可以update使用where子句约束查询
+    DB::table('users')
+        ->where('id', 1)
+        ->update(['votes' => 1]);
+
+    // 快速递增和递减(限制int类型字段)
+    DB::table('users')->increment('votes');
+    DB::table('users')->increment('votes', 5);
+    DB::table('users')->decrement('votes');
+    DB::table('users')->decrement('votes', 5);
+    // 也可以在快速操作时更新其他的列
+    DB::table('users')->increment('votes', 1, ['name' => 'John']); 
+    
+    ```
+    
+    - 删除语句
+    ```php
+    <?php
+    // 查询构建器也可以用于通过该delete方法从表中删除记录。您可以delete通过where在调用delete方法之前添加子句来约束语句
+    DB::table('users')->where('votes', '>', 100)->delete();
+
+    // 如果是清空整个表的话, 请使用truncate()
+    DB::table('users')->truncate();
+    ```
+    
+    - 分页查询
+    ```php
+    <?php
+   
     ```
