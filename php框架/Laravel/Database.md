@@ -299,8 +299,22 @@
     DB::table('users')->truncate();
     ```
     
-    - 分页查询
+    - [分页查询](https://laravel.com/docs/5.5/pagination)
     ```php
     <?php
     $users = DB::table('users')->paginate(15);
+ 
+    //分页实例方法, 每个分页器实例通过以下方法提供其他分页信息：
+    $results->count();
+    $results->currentPage();
+    $results->firstItem();
+    $results->hasMorePages();
+    $results->lastItem();
+    $results->lastPage(); //(Not available when using simplePaginate)
+    $results->nextPageUrl();
+    $results->perPage();
+    $results->previousPageUrl();
+    $results->total(); //(Not available when using simplePaginate)
+    $results->url($page);
+    
     ```
