@@ -302,5 +302,5 @@
     - 分页查询
     ```php
     <?php
-   
+    $users = DB::table('users')->paginate(15);
     ```
