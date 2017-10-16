@@ -1,6 +1,8 @@
 ### phpstorm食用指南
 
   - 官网手册地址https://www.jetbrains.com/help/phpstorm/configuring-line-separators.html#separator_settings
+  
+  - 参考整理来源http://blog.csdn.net/u012906135/article/details/48130801
 
 * 主题的安装for windows
    - config/colors下放置主题文件
@@ -35,11 +37,24 @@
     - 查看类的继承关系-------------[Show Diagram](https://laravel-china.org/topics/3187/how-to-use-phpstorm-to-view-class-inheritance-relationships)
 * 常用的提示快捷键
     - ctrl+J-------------代码提示
-    - ctrl+p-------------方法参数提示
+    - ctrl+P-------------方法参数提示
     - ctrl+alt+space-----类名和接口提示
     - ctrl+alt+A---------查看快捷键
     - ctrl+alt+B---------找到继承该接口或者父级 的所有子类, 统计所有子类个数
     - ctrl+O-------------查看魔术方法
+    - ctrl+D-------------复制光标所在当前的行
+    - ctrl+W-------------复制光标所在的区域,连续按会继续扩大范围
+    - ctrl+alt+L---------快速格式化代码
+    - ctrl+alt+O---------优化导入的类
+    - ctrl+alt+左方向键---退回到上一个操作
+    - ctrl+alt+右方向键---前进到下一个操作
+    - ctrl+shift+enter---自动补全末尾分号结尾
+    - F2-----------------跳转到下一个错误和高亮的位置
+    - ctrl+alt+U---------单词大小写转换
+    - ctrl+N-------------快速查找类
+    - ctrl+shift+alt+N---快速查找函数
+    - ctrl+shift+N-------快速查找文件
+    - ctrl+G-------------跳转到指定的行处
 * 常用的文件操作快捷键
     - F5 复制文件
     - F6 移动文件
