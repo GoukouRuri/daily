@@ -52,8 +52,10 @@
 ### 数据库操作[https://docs.golaravel.com/docs/5.1/queries/]
     
   - 原生sql使用
+  
+    - 参考来源http://blog.csdn.net/zls986992484/article/details/52824962
    
-  - DB类连接、查询构造器使用
+  - DB类连接
     
     - 查询语句 
   
@@ -326,5 +328,19 @@
     $redis = Redis::connection();
 
     // 或者是直接操作Redis的Fader
-    ```    
+    ```
+  
+  - 查询构造器使用 
+  
+    ```php
+    <?php
+    // laravel所自带的Eloquent ORM 是一个ActiveRecord实现，用于数据库操作。每个数据表都有一个与之对应的模型，用于数据表交互。
+    // 建立模型，在app目录下建立一个Student模型，即Student.php，不需要带任何后缀。
+
+    // all()方法查询所有数据  
+    $studnets = Student::all();  
+
+    //find()查询一条，依据主键查询。findOrFail()查找不存在的记录时会抛出异常
+    $student = Student::find(5);  //主键为5的记录 
+    ```   
     
