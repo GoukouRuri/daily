@@ -318,3 +318,13 @@
     $results->url($page);
     
     ```
+    - [Redis](https://laravel.com/docs/5.5/redis)
+  
+    ```php
+    <?php
+    // 实例化一个redis实例
+    $redis = Redis::connection();
+
+    // 或者是直接操作Redis的Fader
+    ```    
+    
