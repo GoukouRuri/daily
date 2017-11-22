@@ -34,3 +34,48 @@
   
  
   ```
+### wkhtmltopdf生成pdf
+  ```php
+  <?php
+  
+  $wkhtmltopdf_exec_url = "wkhtmltopdf";
+  $html = 'http://'.$_SERVER['HTTP_HOST'] . '/Admin_apkCheck/generateHtml.html?id=' . $info['id'];
+  $path =  './public/images/admin/apk_pdf/' . date('Ym', time()) . '/';
+  if (!is_dir($path)) {
+      mkdir($path, 0777, true);
+  }
+
+  $path = $path . "APP安全检测报告-". $info['name'] . $info['version'] .".pdf";
+  $pdf_name = $_SERVER['DOCUMENT_ROOT'] . substr($path, 1);
+
+  try {
+      $pdf_name = iconv('UTF-8', 'GB2312', $pdf_name); //中文文件名和目不会被命令识别，也不会被file_exists识别，需要转码
+      shell_exec("$wkhtmltopdf_exec_url  --zoom 0.75 $html  $pdf_name");
+
+      if (!file_exists($pdf_name)) {
+          $this->message($code = -1, 'pdf文件生成失败');
+      }
+  } catch (\Exception $e) {
+      $this->message($code = 1, $e->getMessage());
+  }
+  return $path;
+
+  ```
+### 读取pdf文件
+  ```php
+  <?php
+  
+  try {
+      $file_name = $this->fillIntoPdf($info);
+
+      $arr = explode('/', $file_name);
+
+      header('Content-type: application/pdf');
+      header('Content-Disposition: attachment; filename="'.array_pop($arr).'"');
+      readfile($file_name);
+      exit;
+  } catch (\Exception $e) {
+      $this->message($code = -1, '下载失败');
+  }
+
+  ```
