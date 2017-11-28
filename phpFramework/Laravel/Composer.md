@@ -1,5 +1,10 @@
 ### composer的安装和使用
 
+- windows下安装请参考资料
+
+  - http://blog.csdn.net/crazywoniu/article/details/73432291
+  - http://blog.csdn.net/iloveyougirls/article/details/52333597
+
 - 查看php版本是否符合
 
   输入命令```php-v```查看php版本
