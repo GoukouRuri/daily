@@ -15,3 +15,41 @@ do{
 ```
 
 然后在php的cli模式下执行，即命令行执行php test.php
+
+
+> ### 使用linux的crontab自动化任务
+- touch crontab_1hour_sh
+- chmod 755 crontab_1hour_sh
+  
+  - crontab_1hour_sh中代码(如果是windows下编写上传到linux服务器器下会有编码问题,最好在linux环境下编写)
+  ```shell
+  #!/bin/bash
+  . /etc/profile
+  sh -c 'cd /data/wwwroot/default/yuqing;php index.php /Home/KeyWord/index;'
+  ```
+- crontab -e
+
+  `*/1 * * * *  bash /usr/local/src/crontabs/crontab_timer_1hour.sh`  每分钟执行一次(默认只有root用户可以执行)
+  
+- 重启crontab服务(不一定必须)
+  
+  `service crond restart`
+  
+- 查看日志
+
+  `crontab -l`
+  `tail -f 10 /var/log/cron`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
