@@ -4,6 +4,7 @@
 
   - http://blog.csdn.net/crazywoniu/article/details/73432291
   - http://blog.csdn.net/iloveyougirls/article/details/52333597
+  - openssl开启http://www.ituring.com.cn/article/261281
 
 - 查看php版本是否符合
 
