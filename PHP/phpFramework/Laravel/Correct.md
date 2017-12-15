@@ -9,6 +9,21 @@
    `Schema::defaultStringLength(191);`
    
   - 或者升级mysql到5.7版本及以上
+  
+* syntax error, unexpected 'class' (T_CLASS), expecting identifier (T_STRING) or variable (T_VARIABLE)
+
+  - php版本过低
+  
+* 打印sql
+```php
+<?php
+// http://blog.csdn.net/fationyyk/article/details/51353041
+use DB;
+// 5.2以下版本直接使用 \DB::
+DB::listen(function($sql, $bindings, $time) {
+    dump($sql);
+});
+```
 
 
 
