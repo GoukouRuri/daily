@@ -1,6 +1,4 @@
 ### 简单的db类
-
-- 
 ```php
 <?php
 class DB_new {
