@@ -25,7 +25,9 @@
     $user->user_name = 'paul';
     $user->update();
     ```
-    
+>>> 关于laravel中使用查询构造器DB类还是ORM
+
+  - ORM更考虑业务间的关联关系，不用要了解sql，适合面向业务层，代码好看，但是维护性和可读性很差,DB类和原生sql适合一些复杂sql和具体底层的实现和一些特殊任务,对熟悉sql的人来说效率快，也容易理解   
 ### Eloquent模型约定[http://laravelacademy.org/post/130.html]
 
   - 默认规则是模型类名的复数作为与其对应的表名，除非在模型类中明确指定了其它名称。所以，在本例中，Eloquent认为Flight模型存储记录在Users表中。你也可以在模型中定义table属性来指定自定义的表名(如果定义了前缀不需要加，会自动带入前缀)

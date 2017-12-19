@@ -1,4 +1,4 @@
-### 简单的db类
+### 简单的db类(未对sql做过滤处理.)
 ```php
 <?php
 class DB_new {
