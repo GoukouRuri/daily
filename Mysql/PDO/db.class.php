@@ -12,6 +12,15 @@
  *   'driver'=> array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8")
  * ]
  * $pdo = new DB_pdo($array);
+ * // 1. Read friendly method  
+ * $db->bind("id","1");
+ * $db->bind("firstname","John");
+ * $person   =  $db->query("SELECT * FROM Persons WHERE firstname = :firstname AND id = :id");
+ * // 2. Bind more parameters
+ * $db->bindMore(array("firstname"=>"John","id"=>"1"));
+ * $person   =  $db->query("SELECT * FROM Persons WHERE firstname = :firstname AND id = :id"));
+ * // 3. Or just give the parameters to the method
+ * $person   =  $db->query("SELECT * FROM Persons WHERE firstname = :firstname",array("firstname"=>"John","id"=>"1"));
  * </pre>
  */
 class DB_pdo {
