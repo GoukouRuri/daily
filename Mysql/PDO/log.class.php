@@ -29,7 +29,7 @@ class Log {
      *	 6. Edit method modifies the current log.
      */
     public function write($message) {
-        $date = new DateTime();
+        $date = new \DateTime();
         $log = $this->path . $date->format('Y-m-d').".log";
         if(is_dir($this->path)) {
             if(!file_exists($log)) {

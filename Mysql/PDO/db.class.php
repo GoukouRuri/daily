@@ -29,15 +29,17 @@ class DB_pdo {
         try
         {
             $this->config = $array;
-            $this->pdo = new PDO($array['dsn'], $array['user'], $array['pass'], $array['driver']);
+			// 开启日志/Open log
+            $this->log = new \Log();
+            $this->pdo = new \PDO($array['dsn'], $array['user'], $array['pass'], $array['driver']);
             // 是否启动预处理语句的模拟/Disable emulation of prepared statements, use REAL prepared statements instead.
-            $this->pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+            $this->pdo->setAttribute(\PDO::ATTR_EMULATE_PREPARES, false);
             // 设置pdo的错误处理模式/We can now log any exceptions on Fatal error.
-            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
             // 连接成功后标识状态/Connection succeeded, set the boolean to true.
             $this->connect_status = true;
         }
-         catch (PDOException $e)
+         catch (\PDOException $e)
         {
             // Write into log
             echo $this->ExceptionLog($e->getMessage());
@@ -56,7 +58,7 @@ class DB_pdo {
      *	@param  int    $fetchmode
      *	@return mixed
      */
-    public function query($query, $params = null, $fetchmode = PDO::FETCH_ASSOC)
+    public function query($query, $params = null, $fetchmode = \PDO::FETCH_ASSOC)
     {
         $query = trim($query);
         $this->init($query,$params);
@@ -109,7 +111,7 @@ class DB_pdo {
             // Execute SQL
             $this->success = $this->query->execute();
         }
-        catch (PDOException $e)
+        catch (\PDOException $e)
         {
             // Write into log and display Exception
             $this->ExceptionLog($e->getMessage(), $query);
@@ -138,7 +140,7 @@ class DB_pdo {
         $this->log->write($message);
 
         //Return exception;
-        throw new Exception($message);
+        throw new \Exception($message);
 
     }
 
@@ -188,7 +190,7 @@ class DB_pdo {
     public function column($query, $params = null)
     {
         $this->init($query, $params);
-        $Columns = $this->query->fetchAll(PDO::FETCH_NUM);
+        $Columns = $this->query->fetchAll(\PDO::FETCH_NUM);
 
         $column = null;
         foreach($Columns as $cells) {
@@ -206,7 +208,7 @@ class DB_pdo {
      *  @param  int    $fetchmode
      *	@return array
      */
-    public function row($query, $params = null, $fetchmode = PDO::FETCH_ASSOC)
+    public function row($query, $params = null, $fetchmode = \PDO::FETCH_ASSOC)
     {
         $this->init($query, $params);
         return $this->query->fetch($fetchmode);

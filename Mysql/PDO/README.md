@@ -26,7 +26,20 @@ require("Db.class.php");
 ```php
 <?php
 // The instance
-$db = new Db();
+$db = array(
+            'dsn'   => 'mysql:dbname=panshi;host=192.168.32.47:3306',
+            'user'  => 'panshi',
+            'pass'  => 'panshi@***0f5d',
+            'driver'=> array(\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8")
+       );
+
+$model = new \DB_pdo($db);
+    $model->bindMore(array(
+        "article_id" => 565656,
+    ));
+   
+    $person = $model->query("SELECT * FROM `ps_article` WHERE `article_id` = :article_id"); // 多行查询,结果集为多维数组
+    $person = $model->row("SELECT * FROM `ps_article` WHERE `article_id` = :article_id"); //   单行查询,结果集为一维数组
 ```
 #### 4.  Logs - Modify the read/write rights of the root folder
 
