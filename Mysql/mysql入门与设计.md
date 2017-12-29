@@ -111,7 +111,7 @@
     - duration time:sql语句需要执行的时间.在优化sql性能时,应尽量减少它.
     - fetch time:数据传输时间,这与查询执行无关.我不会把它视为sql查询调试/优化选项,因为取时间取决于网络连接,这本身并没有任何关系与查询优化.如果获取时间是瓶颈,那么更有可能存在一些网络问题.
   
-  - 关于QC是否需要开启(msyql的查询缓存)
+  - 关于QC是否需要开启(msyql的查询缓存)http://imysql.com/2014/09/05/mysql-faq-why-close-query-cache.shtml
   
     - `SHOW VARIABLES LIKE 'query_cache_type';` 如果为off则是关闭,on为已开启
     - QC严格要求2次SQL请求要完全一样,包括SQL语句,连接的数据库、协议版本、字符集等因素都会影响,最为重要的是,在MySQL里QC是由一个全局锁在控制,每次更新QC的内存块都需要进行锁定.如果线上环境中99%以上都是只读,很少有更新,再考虑开启QC吧,否则,就别开了.
