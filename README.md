@@ -55,30 +55,7 @@ fixing    | 查漏补缺修改中
 
 - Mysql(doing)
 
-  - [常用sql语句](https://github.com/TIGERB/easy-tips/blob/master/mysql/sql.md)
-  - 引擎
-    - InnoDB
-    - MyISAM
-    - Memory
-    - Archive\Blackhole\CSV\Federated\merge\NDB
-  - 事务隔离级别
-    - READ UNCOMMITTED:未提交读
-    - READ COMMITTED：提交读/不可重复读
-    - REPEATABLE READ：可重复读(MYSQL默认事务隔离级别)
-    - SERIALIZEABLE：可串行化
-  - 索引
-    - B-Tree
-    - 哈希索引(hash index)
-    - 空间数据索引(R-Tree)
-    - 全文索引
-  - 锁
-    - 悲观锁
-    - 乐观锁
-  - 分表
-    - 垂直分表
-    - 水平分表
-  - sql优化
-  - 主从配置
+  
 
 - Redis(doing)
 
@@ -129,7 +106,7 @@ fixing    | 查漏补缺修改中
     - [中介者器模式](https://github.com/TIGERB/easy-tips/blob/master/patterns/mediator/test.php)
     - [空对象模式](https://github.com/TIGERB/easy-tips/blob/master/patterns/nullObject/test.php)
 
-- [数据结构(doing)](https://github.com/TIGERB/easy-tips/blob/master/data-structure.md)
+- 数据结构(doing)
 
   - 数组
   - 堆/栈

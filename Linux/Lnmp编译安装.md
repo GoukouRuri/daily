@@ -390,22 +390,120 @@ WITH_READLINE
   `vim /etc/nginx/nginx.conf`
   
   修改server里location部分
-  ```
-    user www www    //nginx以www用户身份和www用户组运行
-    location / {
-         root   /var/www;
-         index   index.html  index.htm  index.php;
-     }
+    - 原配置
+    ```
+    server {
+        listen 80;
+        server_name _;
+        access_log /data/wwwlogs/access_nginx.log combined;
+        root /data/wwwroot/default;
+        index index.html index.htm index.php;
+        #error_page 404 /404.html;
+        #error_page 502 /502.html;
+        location /nginx_status {
+          stub_status on;
+          access_log off;
+          allow 127.0.0.1;
+          deny all;
+        }
+        location ~ [^/]\.php(/|$) {
+          #fastcgi_pass remote_php_ip:9000;
+          fastcgi_pass unix:/dev/shm/php-cgi.sock;
+          fastcgi_index index.php;
+          include fastcgi.conf;
+        }
+        location ~ .*\.(gif|jpg|jpeg|png|bmp|swf|flv|mp4|ico)$ {
+          expires 30d;
+          access_log off;
+        }
+        location ~ .*\.(js|css)?$ {
+          expires 7d;
+          access_log off;
+        }
+        location ~ /\.ht {
+          deny all;
+        }
+    }
 
-    location ~ .php$ {
-        root /var/www; //web服务根目录 
-        fastcgi_pass 127.0.0.1:9000;
-        fastcgi_index index.php;
-        fastcgi_param SCRIPT_FILENAME /var/www$fastcgi_script_name;
-        include fastcgi_params;
+
+    ```
+  - Laravel 下的简单配置
+  
+  ```
+    server {
+        listen 80;
+        server_name _;
+        access_log /data/wwwlogs/access_nginx.log combined;
+        root /data/wwwroot/default/work/public;    # 修改根目录
+        index index.html index.htm index.php;
+        #error_page 404 /404.html;
+        #error_page 502 /502.html;
+        location /nginx_status {
+          stub_status on;
+          access_log off;
+          allow 127.0.0.1;
+          deny all;
+        }
+        
+        # nginx下需要开启重写
+        try_files $uri $uri/ @rewrite; 
+          
+        location @rewrite { 
+          rewrite ^/(.*)$ /index.php?_url=/$1; 
+        } 
+         
+        location ~ [^/]\.php(/|$) {
+          #fastcgi_pass remote_php_ip:9000;
+          fastcgi_pass unix:/dev/shm/php-cgi.sock;  # sock模式内存中允许更快
+          fastcgi_index index.php;
+          include fastcgi.conf;                     # fastcgi相关配置
+        }
+        location ~ .*\.(gif|jpg|jpeg|png|bmp|swf|flv|mp4|ico)$ {
+          expires 30d;
+          access_log off;
+        }
+        location ~ .*\.(js|css)?$ {
+          expires 7d;
+          access_log off;
+        }
+        location ~ /\.ht {
+          deny all;
+        }
     }
   ```
-  修改php-fpm.d/www.conf
+  
+  - fastcgi相关配置
+  ```conf
+ 
+    fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+    fastcgi_param  QUERY_STRING       $query_string;
+    fastcgi_param  REQUEST_METHOD     $request_method;
+    fastcgi_param  CONTENT_TYPE       $content_type;
+    fastcgi_param  CONTENT_LENGTH     $content_length;
+    
+    fastcgi_param  SCRIPT_NAME        $fastcgi_script_name;
+    fastcgi_param  REQUEST_URI        $request_uri;
+    fastcgi_param  DOCUMENT_URI       $document_uri;
+    fastcgi_param  DOCUMENT_ROOT      $document_root;
+    fastcgi_param  SERVER_PROTOCOL    $server_protocol;
+    fastcgi_param  REQUEST_SCHEME     $scheme;
+    fastcgi_param  HTTPS              $https if_not_empty;
+    
+    fastcgi_param  GATEWAY_INTERFACE  CGI/1.1;
+    fastcgi_param  SERVER_SOFTWARE    nginx/$nginx_version;
+    
+    fastcgi_param  REMOTE_ADDR        $remote_addr;
+    fastcgi_param  REMOTE_PORT        $remote_port;
+    fastcgi_param  SERVER_ADDR        $server_addr;
+    fastcgi_param  SERVER_PORT        $server_port;
+    fastcgi_param  SERVER_NAME        $server_name;
+    
+    # PHP only, required if PHP was built with --enable-force-cgi-redirect
+    fastcgi_param  REDIRECT_STATUS    200;
+
+  ```
+   
+  - 修改php-fpm.d/www.conf
   ```
   user www
   group www
@@ -418,6 +516,7 @@ WITH_READLINE
 - 启动php-fpm
 
   `/usr/local/php7/sbin/php-fpm`
+  或者 service php-fpm restart   // 修改php.ini需要重启fpm
   
 - 测试一下在web服务服务目录写入php代码
 
