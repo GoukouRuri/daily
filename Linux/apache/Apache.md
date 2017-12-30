@@ -59,6 +59,7 @@
     
 > ### Windows系统下如何配置多个apache服务器
 
+  - 参考资料http://blog.csdn.net/demon3182/article/details/51554261
   - 非80端口需要加地址栏端口号比较麻烦,另外的apache服务需要手动运行,不是很方便
   
 > ### Windows系统下如何一个apache服务器运行多个php版本
