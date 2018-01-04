@@ -83,7 +83,8 @@ FcgidMaxRequestLen 104857600  # 当你上传文件的时候发现总是出现500
 ```
   - 对需要不同 PHP 版本的设置 httpd-vhosts.conf 添加下面代码,加在VirtualHost里,但不在Directory里
 ```apacheconfig
-FcgidInitialEnv PHPRC "C:/ProgramFiles(x86)/php7.0/"
+# 这里的路径必须写成正斜杠,windows系统下写反斜杠也会导致apache无法启动,原因未知!
+FcgidInitialEnv PHPRC "C:/ProgramFiles(x86)/php7.0/"   
 FcgidWrapper "C:/ProgramFiles(x86)/php7.0/php-cgi.exe" .php
 ```
   - 重启apache
