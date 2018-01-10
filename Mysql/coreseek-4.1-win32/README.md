@@ -1,4 +1,30 @@
-## PHP+MYSQL+Coreseek(sphinx+)
+## PHP+MYSQL+Coreseek(sphinx+mmseg中文分词)
+
+* FOR WINDOWS7([参考资料](http://www.5ixuexiwang.com/html/biancheng/server/2016/1221/2154.html))
+
+  - CMD窗口---进入coreseek目录执行下列命令
+```shell
+  # 生成索引源base，生成全部则为--all
+  bin\indexer -c etc\csft_mysql.conf base
+  
+  # 测试中文分词
+  echo 愚人节 | D:\phpStudy\PHPTutorial\WWW\coreseek-4.1-win32\bin\iconv -f gbk -t utf-8 | D:\phpStudy\PHPTutorial\WWW\coreseek-4.1-win32\bin\search -c etc\csft_mysql.conf --stdin | D:\phpStudy\PHPTutorial\WWW\coreseek-4.1-win32\bin\iconv -f utf-8 -t gbk
+  
+  # 测试服务
+  D:\phpStudy\PHPTutorial\WWW\coreseek-4.1-win32\bin\searchd -c etc\csft_mysql.conf
+  
+  # 安装服务
+  D:\phpStudy\PHPTutorial\WWW\coreseek-4.1-win32\bin\searchd --install --config D:\phpStudy\PHPTutorial\WWW\coreseek-4.1-win32\etc\csft_mysql.conf
+
+  # 安装服务完成请在计算机管理启动searchd服务
+```
+
+* FOR LINUX([参考资料](http://www.codexiu.cn/python/blog/14116/))
+
+---
+
+> ### 以下的地址和测试不一定有效，属于作者原来的readmine.txt文件的内容
+
 最新使用文档，请查看：http://www.coreseek.cn/products/products-install/
 
 测试说明：
