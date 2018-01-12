@@ -1,4 +1,4 @@
-## redis配置认证密码
+## redis配置认证密码[参考资料：https://www.cnblogs.com/langtianya/p/5189234.html]
 
 ```conf
 /etc/redis.conf
