@@ -22,11 +22,18 @@ do{
 - chmod 755 crontab_1hour_sh
   
   - crontab_1hour_sh中代码(如果是windows下编写上传到linux服务器器下会有编码问题,最好在linux环境下编写)
-  ```shell
+> ###### thinkphp路由脚本执行 
+```shell
   #!/bin/bash
   . /etc/profile
   sh -c 'cd /data/wwwroot/default/yuqing;php index.php /Home/KeyWord/index;'
-  ```
+```
+> ###### 一般路由脚本执行
+```shell
+#!/bin/bash
+. /etc/profile
+sh -c 'date +%Y-%m-%d---%H:%M:%S >> /data/wwwroot/default/pdf.log && curl http://www.cxrz.com/pdf/init.html >> /data/wwwroot/default/pdf.log && echo -e "\n" >> /data/wwwroot/default/pdf.log';
+```
 - crontab -e
 
   `*/1 * * * *  bash /usr/local/src/crontabs/crontab_timer_1hour.sh`  每分钟执行一次(默认只有root用户可以执行)
