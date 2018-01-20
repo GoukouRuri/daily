@@ -318,16 +318,16 @@
             ```php
             <?php
             //示例
-            $lists=array( array("aaa","bbb","ccc"),
-                          array("111","222","333"),
-                          array("A","B"));
-            $fp=fopen("file.csv","w");
+            $lists=array( array("aaa", "bbb", "ccc"),
+                          array("111", "222", "333"),
+                          array("A", "B"));
+            $fp=fopen("file.csv", "w");
             //如果要输出到显示器中来,需要使用到一种特殊的输出流 php://output
-            //$fp=fopen("php://output","w");
+            //$fp=fopen("php://output", "w");
         
             foreach($lists as $flieds){
                 //将每一行数据写入到文件中去
-                fputcsv($fp,$flieds);
+                fputcsv($fp, $flieds);
             }
             fclose($fp);
         
