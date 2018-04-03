@@ -8,7 +8,7 @@
 mysql -uroot -p123456
 use mysql
 update user set host = '%' where user = 'root' and host='localhost';
-grant all privileges on . to ‘root’@’%’ identified by ‘xxxxxx’; 
+grant all privileges on *.* to 'root'@'%' identified by '你设置的密码' WITH GRANT OPTION; 
 FLUSH PRIVILEGES;
 重启mysql
 ```
