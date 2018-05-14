@@ -26,7 +26,7 @@ use DesignPatterns\Creational\Builder\Parts\Vehicle;
  */
 class Director
 {
-    public function build(BuilderInterface $builder): Vehicle
+    public function build(BuilderInterface $builder)
     {
         $builder->createVehicle();
         $builder->addDoors();
@@ -56,7 +56,7 @@ interface BuilderInterface
 
     public function addDoors();
 
-    public function getVehicle(): Vehicle;
+    public function getVehicle()
 }
 ```
 
@@ -101,7 +101,7 @@ class TruckBuilder implements BuilderInterface
         $this->truck = new Parts\Truck();
     }
 
-    public function getVehicle(): Vehicle
+    public function getVehicle()
     {
         return $this->truck;
     }
@@ -148,7 +148,7 @@ class CarBuilder implements BuilderInterface
         $this->car = new Parts\Car();
     }
 
-    public function getVehicle(): Vehicle
+    public function getVehicle()
     {
         return $this->car;
     }
