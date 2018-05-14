@@ -34,7 +34,9 @@
     - 全局搜素文件--------shift+ctrl+alt+N
     - 搜索匹配的内容-------shift+ctrl+F
     - 全项目范围查找类--------------ctrl+N
-    - 查看类的继承关系-------------[Show Diagram](https://laravel-china.org/topics/3187/how-to-use-phpstorm-to-view-class-inheritance-relationships)
+    - 查取函数或类在哪些地方被调用---alt+f7
+    - 查取最近打开的文件------------ctrl+e
+    - 查看类的继承关系-------------[Show Diagram](https://laravel-china.org/topics/3187/how-to-use-phpstorm-to-view-class-inheritance-relationships)
 * 常用的提示快捷键
     - ctrl+J-------------代码提示
     - ctrl+P-------------方法参数提示
