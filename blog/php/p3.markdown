@@ -17,9 +17,9 @@ abstract class FactoryMethod
     const CHEAP = 'cheap';
     const FAST = 'fast';
 
-    abstract protected function createVehicle(string $type): VehicleInterface;
+    abstract protected function createVehicle(string $type);
 
-    public function create(string $type): VehicleInterface
+    public function create(string $type)
     {
         $obj = $this->createVehicle($type);
         $obj->setColor('black');
@@ -37,7 +37,7 @@ namespace DesignPatterns\Creational\FactoryMethod;
 
 class ItalianFactory extends FactoryMethod
 {
-    protected function createVehicle(string $type): VehicleInterface
+    protected function createVehicle(string $type)
     {
         switch ($type) {
             case parent::CHEAP:
@@ -59,7 +59,7 @@ namespace DesignPatterns\Creational\FactoryMethod;
 
 class GermanFactory extends FactoryMethod
 {
-    protected function createVehicle(string $type): VehicleInterface
+    protected function createVehicle(string $type)
     {
         switch ($type) {
             case parent::CHEAP:
