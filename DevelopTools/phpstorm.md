@@ -65,3 +65,4 @@
     - pin tab 将文件标签固定
     
 * 激活码`http://blog.csdn.net/u013939884/article/details/68921462`
+  http://www.0-php.com:1017
