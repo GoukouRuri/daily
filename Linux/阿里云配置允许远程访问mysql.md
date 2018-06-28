@@ -28,5 +28,15 @@ mysql --help | grep my.cnf
 vim /etc/my.cnf
 改完重启iptables
 ```
+- 出现`2003-can't connect to mysql server on ' ' (10038)`这个报错
 
-  - 检查云平台安全组是否开启3306端口入方向，没有则添加(一般`2003-can't connect to mysql server on ' ' (10038)`这个报错都是因为这个原因)
+  - 修改防火墙规则,允许3306端口对外访问 
+  - 检查云平台安全组是否开启3306端口入方向，没有则添加
+  
+```shell
+$ vi /etc/sysconfig/iptables
+```
+
+在80下方添加规则`-A INPUT -p tcp -m state --state NEW -m tcp --dport 3306 -j ACCEPT`
+
+重启防火墙
