@@ -20,8 +20,8 @@ Mysql [(none)] > use zoo;
 Mysql [(none)] > show variables like "%storage_engine%";
 
 # create table if not exists `user` (
-	`id` INT NOT NULL AUTO_INCREMENT,
-	`username` VARCHAR(20) NOT NULL,
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `username` VARCHAR(20) NOT NULL,
     `password` VARCHAR(100) NOT NULL DEFAULT '000000',
     `status` TINYINT NOT NULL DEFAULT 1,
     `email` TINYINT NOT NULL DEFAULT '',
