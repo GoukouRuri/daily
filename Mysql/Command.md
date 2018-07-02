@@ -97,7 +97,7 @@ ALTER TABLE `user` rename `user_new`;
 ALTER TABLE `user` engine = MyISAM;
 
 # 添加外键约束(这里是完整约束，级联用cascade)
-Alter TABLE `user` add foreign key(address_id) references user_address(address_id) on delete restrict on update restrict; 
+ALTER TABLE `user` add foreign key(address_id) references user_address(address_id) on delete restrict on update restrict; 
 
 # 移除外键约束
 ALTER TABLE `user_address` drop FOREIGN KEY <生成的外键名>;
