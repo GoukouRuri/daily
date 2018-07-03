@@ -19,3 +19,11 @@ ALTER TABLE `user` add `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAM
 - 日期/时间数据类型：包括YEAR ，TIME ，DATE ，DATETIME和TIMESTAMP
 - 字符串数据类型：包括CHAR，VARCHAR，BINARY，VARBINARY，BLOB，TEXT，ENUM和SET
 
+##### varchar和char之间有什么区别？
+
+- char(M)是固定长度字符串，存储上自动填充空格以达到指定长度，检索时自动删除尾部空格。
+- varchar(M)是长度可变的字符串，M只是指定最大字节长度，实际长度由保存的字符串本身决定，存储长度为字符串长度+1个字节，检索时保留尾部空格
+
+##### enum(枚举)和set(集合)有什么区别？
+
+​    enum只能存单值，set可存多值，最多可以存64个成员，空字符串也是合法值，比如存兴趣爱好就适合set类型。enum和set都是字符串类型，但是在类部，mysql是以它们的值对应的索引数值存储它们的。
