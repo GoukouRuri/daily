@@ -31,3 +31,7 @@ ALTER TABLE `user` add `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAM
 ##### mysql的位运算有什么使用场景？
 
   有限状态标识和有限权限标识时可以使用，[参考资料](https://www.cnblogs.com/heluo/p/3422357.html)
+
+##### mysql中如何执行区分大小写的字符串比较？
+
+可以使用BINARY关键字来强制执行区分大小写
