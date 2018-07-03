@@ -2,7 +2,7 @@
 
 ------
 
-##### timestamp字段在5.6以上版本如何设置?
+##### timestamp字段在5.6以上版本如何设置？
 
 explicit_defaults_for_timestamp参数在MySQL 5.6.6开始加入 ，在/etc/my.cnf配置文件中添加或修改为explicit_defaults_for_timestamp=1，然后timestamp类型的字段设置如下：
 
@@ -12,3 +12,10 @@ ALTER TABLE `user` add `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAM
 ```
 
 [参考资料](http://www.ywnds.com/?p=8309)
+
+##### mysql有哪些数据类型？
+
+- 数值数据类型：包括整数类型TINYINT， SMAllINT， MEDIUMINT，INT ，BIGINT，浮点小数类型 FLOAT DOUBLE ，定点小数类型DECIMAL
+- 日期/时间数据类型：包括YEAR ，TIME ，DATE ，DATETIME和TIMESTAMP
+- 字符串数据类型：包括CHAR，VARCHAR，BINARY，VARBINARY，BLOB，TEXT，ENUM和SET
+
