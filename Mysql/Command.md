@@ -44,8 +44,8 @@ CREATE TABLE IF NOT EXISTS `user` (
     `fixed_telephone` VARCHAR(20) NOT NULL DEFAULT '' COMMENT '固定电话',
     `avatar` VARCHAR(200) NOT NULL DEFAULT '' COMMENT '用户头像',
     `wechat_openid` VARCHAR(150) NOT NULL DEFAULT '' COMMENT '微信openid',
-    `update_time` timestamp NOT NULL ON UPDATE CURRENT_TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
-    `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+    `create_time` DATETIME  NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+    `update_time` DATETIME  NOT NULL ON UPDATE CURRENT_TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
     PRIMARY KEY (`id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COMMENT '用户表';
 
@@ -57,15 +57,46 @@ CREATE TABLE IF NOT EXISTS `user_address` (
     `user_id` INT NOT NULL COMMENT '用户id',
     `wechat_openid` VARCHAR(150) NOT NULL DEFAULT '' COMMENT '微信openid',
     `is_default` TINYINT NOT NULL DEFAULT 0 COMMENT '是否设为默认(0否 1是)',
-    `is_del` TINYINT NOT NULL DEFAULT 0 COMMENT '是否删除(0否 1是)',
     `province_id` SMALLINT NOT NULL DEFAULT 0 COMMENT '省级id',
     `city_id` SMALLINT NOT NULL DEFAULT 0 COMMENT '市级id',
     `district_id` INT NOT NULL DEFAULT 0 COMMENT '区县级id',
     `address_detail` VARCHAR(200) NOT NULL DEFAULT '' COMMENT '详细地址',
-    `update_time` timestamp NOT NULL ON UPDATE CURRENT_TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
-    `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+    `is_del` TINYINT NOT NULL DEFAULT 0 COMMENT '是否删除(0否 1是)',
+    `create_time` DATETIME  NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+    `update_time` DATETIME  NOT NULL ON UPDATE CURRENT_TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
     PRIMARY KEY (`address_id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COMMENT '用户地址表';
+
+-------------------------------------------------
+-- 公司表company 
+-------------------------------------------------
+CREATE TABLE IF NOT EXISTS `company` (
+    `company_id` INT NOT NULL AUTO_INCREMENT,
+    `company_name` VARCHAR(100) NOT NULL DEFAULT '' COMMENT '公司名称',
+    `country_id` SMALLINT NOT NULL DEFAULT 0 COMMENT '所在国家id',
+    `city_id` INT NOT NULL DEFAULT 0 COMMENT '所在城市id',
+    `company_address` VARCHAR(150) NOT NULL DEFAULT '' COMMENT '公司地址',
+    `employer_number` INT NOT NULL DEFAULT 0 COMMENT '雇员数量',
+    `company_birth` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '公司创立时间',
+    `industry` INT NOT NULL DEFAULT 0 COMMENT '行业',
+    `is_del` TINYINT NOT NULL DEFAULT 0 COMMENT '是否删除(0否 1是)',
+    `create_time` DATETIME  NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+    `update_time` DATETIME  NOT NULL ON UPDATE CURRENT_TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+    PRIMARY KEY (`company_id`)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8 COMMENT '公司表'; 
+
+-------------------------------------------------
+-- 用户-公司关联表user_company 
+-------------------------------------------------
+CREATE TABLE IF NOT EXISTS `user_company` (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `user_id` INT NOT NULL COMMENT '',
+    `company_id` INT NOT NULL COMMENT '',
+    `is_del` TINYINT NOT NULL DEFAULT 0 COMMENT '是否删除(0否 1是)',
+    `create_time` DATETIME  NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+    `update_time` DATETIME  NOT NULL ON UPDATE CURRENT_TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+    PRIMARY KEY (`id`)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8 COMMENT = '用户-公司关联表';
 
 # 查看建库语句
 Mysql [(none)] > show create database zoo;

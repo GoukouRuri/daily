@@ -20,5 +20,7 @@
 
   
 
-- **添加外键需要慎重**，考虑约束和级联两种模式在ON DELETE和ON UPDATE的区别。[参考资料](https://blog.csdn.net/dingding_12345/article/details/47905715)
+- **添加外键需要慎重**，考虑约束和级联两种模式在ON DELETE和ON UPDATE的区别，并且外键约束不能跨引擎使用。[参考资料](https://blog.csdn.net/dingding_12345/article/details/47905715)
+
+- **日期时间尽量用datetime不要用timestamp**，因为timestamp时间范围小
 
