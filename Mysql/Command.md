@@ -155,7 +155,39 @@ Mysql [(none)] > show variables like "log%";
 Mysql [zoo] > show warnings;
 ```
 
-##### 函数指定集
+##### 运算符指令集
+
+```mysql
+# 算数运算符(+, -, *, /, %)
+SELECT num+1, num-1, num*2, num/2, num%2 FROM `test`;
+
+# 比较运算符
+SELECT a=1, a>1, a<1, a<>1, a!=1, a>=1, a<=1 FROM `test`;
+SELECT * FROM `test` WHERE a IS NULL, b IS NOT NULL;
+SELECT * FROM `test` WHERE a BETWEEN 10 AND 20;
+SELECT * FROM `test` WHERE a IN(1, 2, 3);
+SELECT * FROM `test` WHERE a NOT IN(1, 2, 3);
+SELECT least(1, 2, 3) FROM `test`;
+SELECT greatest(1, 2, 3) FROM `test`;
+
+# 正则运算符
+SELECT * FROM `test` WHERE a regexp 'y$'; 
+
+# 逻辑运算符(and, or , !)
+SELECT * FROM `test` WHERE a = 1 AND (b = 2 OR c = 3); 
+
+# 位运算符
+SELECT * FROM `test` WHERE a & 2; 
+SELECT * FROM `test` WHERE a ^ 2; 
+SELECT * FROM `test` WHERE a | 2; 
+SELECT * FROM `test` WHERE a & ~2;
+SELECT a<<2 FROM `test`;
+SELECT a>>2 FROM `test`;
+```
+
+
+
+##### 函数指令集
 
 ```mysql
 

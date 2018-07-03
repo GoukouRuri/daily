@@ -27,3 +27,7 @@ ALTER TABLE `user` add `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAM
 ##### enum(枚举)和set(集合)有什么区别？
 
 ​    enum只能存单值，set可存多值，最多可以存64个成员，空字符串也是合法值，比如存兴趣爱好就适合set类型。enum和set都是字符串类型，但是在类部，mysql是以它们的值对应的索引数值存储它们的。
+
+##### mysql的位运算有什么使用场景？
+
+  有限状态标识和有限权限标识时可以使用，[参考资料](https://www.cnblogs.com/heluo/p/3422357.html)

@@ -22,9 +22,24 @@
 
 - **添加外键需要慎重**。考虑约束和级联两种模式在ON DELETE和ON UPDATE的区别，并且外键约束不能跨引擎使用。[参考资料](https://blog.csdn.net/dingding_12345/article/details/47905715)
 
+  
+
 - **日期时间尽量用datetime不要用timestamp，因为timestamp时间范围小**
+
+  
 
 - **插入时数据的值或字节数超过字段的设定时，在不严格会自动截断和取最大值，但是严格模式下会直接报错**`Data too long for column`
 
+  
+
 - **mysql中慎用BLOB和TEXT类型。**BLOB与TEXT是为了存储极大的字符串而设计的数据类型，采用二进制与字符串方式存储。在实际使用中应该慎用这两个类型，尤其是会创建临时表的情况下，因为如果临时表大小超过max_heap_table_size或者tmp_table_size，就会将临时表存储在磁盘上，进而导致整体速度下降！ 不要用它们来存音频和图片等信息，那些应该只需要存具体路径就行，可以用cnd加速，mysql不适合存大文件信息，无法进行性能优化。
 
+  
+
+- **ENGINE=InnoDB DEFAULT CHARSET=utf8 CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC 详解** 。[参考资料](https://blog.csdn.net/fdsfdf3434/article/details/78356234)
+
+  
+
+- **安全等于运算符**`<=>`**可以对NULL进行判断**
+
+  
