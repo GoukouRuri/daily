@@ -1,5 +1,9 @@
 ### Mysql5.7 CLI指令集整理
 
+------
+
+##### 常用指令集
+
 ```mysql
 # 列出所有数据库
 Mysql [(none)] > show databases;
@@ -25,8 +29,20 @@ Mysql [(none)] > use zoo;
 # 查看数据库默认使用的引擎
 Mysql [(none)] > show variables like "%storage_engine%";
 
-# 查看数据库相关日志(binlog等)
-Mysql [(none)] > show variables like "log%";
+# 查看建库语句
+Mysql [(none)] > show create database zoo;
+
+# 查看表结构
+Mysql [zoo] > desc user;
+
+# 单独查看表中某个字段结构(比如gender)
+Mysql [zoo] > show columns from user like "%gender%";
+
+# 查看建表语句
+Mysql [zoo] > show create table user;
+
+# 删除数据表	
+Mysql [(none)] > drop database;
 
 # 创建数据表
 -------------------------------------------------
@@ -39,6 +55,7 @@ CREATE TABLE IF NOT EXISTS `user` (
     `password` VARCHAR(100) NOT NULL DEFAULT '000000' COMMENT '密码',
     `status` TINYINT NOT NULL DEFAULT 1 COMMENT '账号状态',
     `email` VARCHAR(50) NOT NULL DEFAULT '' COMMENT '电子邮箱',
+    `gender` ENUM("男","女","未知","都是") NOT NULL DEFAULT '未知' COMMENT '性别',
     `is_admin` TINYINT NOT NULL DEFAULT 0 COMMENT '是否为管理员(0否 1是)',
     `phone` VARCHAR(11) NOT NULL DEFAULT '' COMMENT '手机号码',
     `fixed_telephone` VARCHAR(20) NOT NULL DEFAULT '' COMMENT '固定电话',
@@ -98,15 +115,6 @@ CREATE TABLE IF NOT EXISTS `user_company` (
     PRIMARY KEY (`id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COMMENT = '用户-公司关联表';
 
-# 查看建库语句
-Mysql [(none)] > show create database zoo;
-
-# 查看建表语句
-Mysql [zoo] > show create table user;
-
-# 删除数据表	
-drop database;
-
 # 添加字段(不含有完整性约束限制)
 ALTER TABLE `user` add `update_time` timestamp NOT NULL ON UPDATE CURRENT_TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间';
 ALTER TABLE `user` add `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间' AFTER `update_time`;
@@ -132,5 +140,24 @@ ALTER TABLE `user` add foreign key(address_id) references user_address(address_i
 
 # 移除外键约束
 ALTER TABLE `user_address` drop FOREIGN KEY <生成的外键名>;
+
+# 添加枚举类型
+ALTER TABLE `user` add `gender` ENUM("男","女","未知","都是") NOT NULL DEFAULT '未知' COMMENT '性别';
+```
+
+##### 调试指令集
+
+```mysql
+# 查看数据库相关日志(binlog等)
+Mysql [(none)] > show variables like "log%";
+
+# sql执行出错是查看错误详情
+Mysql [zoo] > show warnings;
+```
+
+##### 函数指定集
+
+```mysql
+
 ```
 
