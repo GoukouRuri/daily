@@ -190,6 +190,40 @@ SELECT a>>2 FROM `test`;
 ##### 函数指令集
 
 ```mysql
+# sum求和函数
+select sum(num) as total from tb_goods;
 
+# avg平均值函数
+select avg(price) as avg_price from tb_goods;
+
+# count统计函数
+select count(id) as num from tb_goods;
+
+# distinct去重函数
+select distinct(name) from tb_goods;
+
+# locate函数, 返回搜索的字符在字符串中第一次出现的位置, 不存在则返回0
+select locate('上衣', name) as position from tb_goods;
+
+# substr函数, 截取字符串(例如截取name字段中#前的字符串)
+select substr(name, 1, locate('#', name) - 1) as name_prefix from tb_goods; 
+
+# DATE_FORMAT()以不同格式显示时间
+select  
+DATE_FORMAT(NOW(),'%b %d %Y %h:%i %p'),
+DATE_FORMAT(NOW(),'%m-%d-%Y'),
+DATE_FORMAT(NOW(),'%d %b %y'),
+DATE_FORMAT(NOW(),'%d %b %Y %T:%f')
+
+# NOW()取当前时间, CURDATE()取当前日期,CURTIME()取当前时分秒
+select NOW(), CURDATE(), CURTIME();
+
+# EXTRACT()返回日期的指定格式部分
+SELECT EXTRACT(YEAR FROM OrderDate) AS OrderYear,
+EXTRACT(MONTH FROM OrderDate) AS OrderMonth,
+EXTRACT(DAY FROM OrderDate) AS OrderDay,
+FROM Orders
+WHERE OrderId = 1;  
 ```
+
 
