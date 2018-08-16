@@ -205,8 +205,10 @@ select distinct(name) from tb_goods;
 # locate函数, 返回搜索的字符在字符串中第一次出现的位置, 不存在则返回0
 select locate('上衣', name) as position from tb_goods;
 
-# substr函数, 截取字符串(例如截取name字段中#前的字符串)
+# substr函数, 截取字符串(例如截取name字段中#前的字符串), left()从左边截取, right()从右边截取
 select substr(name, 1, locate('#', name) - 1) as name_prefix from tb_goods; 
+select left(name, 10) as leftname from tb_goods;
+select right(name, 10) as rightname from tb_goods;
 
 # DATE_FORMAT()以不同格式显示时间
 select  
@@ -223,7 +225,18 @@ SELECT EXTRACT(YEAR FROM OrderDate) AS OrderYear,
 EXTRACT(MONTH FROM OrderDate) AS OrderMonth,
 EXTRACT(DAY FROM OrderDate) AS OrderDay,
 FROM Orders
-WHERE OrderId = 1;  
+WHERE OrderId = 1; 
+
+# DATEDIFF()返回两个日期之间的天数
+SELECT DATEDIFF('2008-11-29','2008-11-30') AS DiffDate
+
+# DATE_ADD(date,INTERVAL expr type)函数向日期添加指定的时间间隔, 第二个参数类型
+SELECT OrderId,DATE_ADD(OrderDate,INTERVAL 45 DAY) AS OrderPayDate
+FROM Orders
+
+# DATE_SUB(date,INTERVAL expr type)函数从日期减去指定的时间间隔, 第二个参数类型
+SELECT OrderId,DATE_SUB(OrderDate,INTERVAL 5 DAY) AS SubtractDate
+FROM Orders
 ```
 
 
