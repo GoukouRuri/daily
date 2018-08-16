@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9c8b28eb-4793-40b8-9ca9-c4c20afee0e5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mysql/Command.md" afterPath="$PROJECT_DIR$/Mysql/Command.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,14 +17,52 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="phpstorm.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DevelopTools/phpstorm.md">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Command.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Mysql/Command.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="152">
-                <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-                <folding />
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="731">
+                <caret line="189" column="11" lean-forward="true" selection-start-line="189" selection-start-column="11" selection-end-line="189" selection-end-column="11" />
+                <folding>
+                  <marker date="1534322706000" expanded="true" signature="225:244" ph="CREATE DATAB... zoo" />
+                  <marker date="1534322706000" expanded="true" signature="272:289" ph="DROP DATABAS... " />
+                  <marker date="1534322706000" expanded="true" signature="326:345" ph="CREATE DATAB... zoo" />
+                  <marker date="1534322706000" expanded="true" signature="487:506" ph="create datab... zoo" />
+                  <marker date="1534322706000" expanded="true" signature="651:668" ph="create table... user" />
+                  <marker date="1534322706000" expanded="true" signature="697:710" ph="drop databas... " />
+                  <marker date="1534322706000" expanded="true" signature="833:1871" ph="CREATE TABLE... user" />
+                  <marker date="1534322706000" expanded="true" signature="1995:2854" ph="CREATE TABLE... user_address" />
+                  <marker date="1534322706000" expanded="true" signature="2972:3843" ph="CREATE TABLE... company" />
+                  <marker date="1534322706000" expanded="true" signature="3972:4468" ph="CREATE TABLE... user_company" />
+                  <marker date="1534322706000" expanded="true" signature="4490:4614" ph="ALTER TABLE `user`... " />
+                  <marker date="1534322706000" expanded="true" signature="4616:4732" ph="ALTER TABLE `user`... " />
+                  <marker date="1534322706000" expanded="true" signature="4734:4831" ph="ALTER TABLE `user`... " />
+                  <marker date="1534322706000" expanded="true" signature="4847:4974" ph="ALTER TABLE `user`... " />
+                  <marker date="1534322706000" expanded="true" signature="4991:5131" ph="ALTER TABLE `user`... " />
+                  <marker date="1534322706000" expanded="true" signature="5141:5175" ph="ALTER TABLE `user`... " />
+                  <marker date="1534322706000" expanded="true" signature="5185:5221" ph="ALTER TABLE `user`... " />
+                  <marker date="1534322706000" expanded="true" signature="5235:5269" ph="ALTER TABLE `user`... " />
+                  <marker date="1534322706000" expanded="true" signature="5301:5421" ph="ALTER TABLE `user`... " />
+                  <marker date="1534322706000" expanded="true" signature="5434:5486" ph="ALTER TABLE `user_address`... " />
+                  <marker date="1534322706000" expanded="true" signature="5498:5588" ph="ALTER TABLE `user`... " />
+                  <marker date="1534322706000" expanded="true" signature="5781:5833" ph="SELECT num+1... test" />
+                  <marker date="1534322706000" expanded="true" signature="5844:5900" ph="SELECT a=1, test" />
+                  <marker date="1534322706000" expanded="true" signature="5902:5953" ph="SELECT * FRO... test" />
+                  <marker date="1534322706000" expanded="true" signature="5955:6001" ph="SELECT * FRO... test" />
+                  <marker date="1534322706000" expanded="true" signature="6003:6043" ph="SELECT * FRO... test" />
+                  <marker date="1534322706000" expanded="true" signature="6045:6089" ph="SELECT * FRO... test" />
+                  <marker date="1534322706000" expanded="true" signature="6091:6124" ph="SELECT least... test" />
+                  <marker date="1534322706000" expanded="true" signature="6126:6162" ph="SELECT great... test" />
+                  <marker date="1534322706000" expanded="true" signature="6173:6213" ph="SELECT * FRO... test" />
+                  <marker date="1534322706000" expanded="true" signature="6238:6291" ph="SELECT * FRO... test" />
+                  <marker date="1534322706000" expanded="true" signature="6302:6334" ph="SELECT * FRO... test" />
+                  <marker date="1534322706000" expanded="true" signature="6337:6369" ph="SELECT * FRO... test" />
+                  <marker date="1534322706000" expanded="true" signature="6372:6404" ph="SELECT * FRO... test" />
+                  <marker date="1534322706000" expanded="true" signature="6407:6440" ph="SELECT * FRO... test" />
+                  <marker date="1534322706000" expanded="true" signature="6442:6465" ph="SELECT a&lt;&lt;2 test" />
+                  <marker date="1534322706000" expanded="true" signature="6467:6490" ph="SELECT a&gt;&gt;2 test" />
+                </folding>
               </first_editor>
               <second_editor />
             </state>
@@ -35,6 +74,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Mysql/Command.md" />
+      </list>
+    </option>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
@@ -43,10 +89,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="15" />
     <option name="y" value="23" />
-    <option name="width" value="1250" />
-    <option name="height" value="728" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -63,7 +108,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -76,9 +121,23 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="daily" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="daily" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mysql" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -103,17 +162,19 @@
       <workItem from="1506193284917" duration="190000" />
       <workItem from="1506430515948" duration="396000" />
       <workItem from="1516632180390" duration="290000" />
+      <workItem from="1534322645855" duration="679000" />
+      <workItem from="1534380837557" duration="35000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1072000" />
+    <option name="totallyTimeSpent" value="1786000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="15" y="23" width="1250" height="728" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2665563" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1773163" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -143,12 +204,51 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DevelopTools/phpstorm.md">
+    <entry file="file://$PROJECT_DIR$/DevelopTools/phpstorm.md" />
+    <entry file="file://$PROJECT_DIR$/Mysql/Command.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="152">
-            <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-            <folding />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="731">
+            <caret line="189" column="11" lean-forward="true" selection-start-line="189" selection-start-column="11" selection-end-line="189" selection-end-column="11" />
+            <folding>
+              <marker date="1534322706000" expanded="true" signature="225:244" ph="CREATE DATAB... zoo" />
+              <marker date="1534322706000" expanded="true" signature="272:289" ph="DROP DATABAS... " />
+              <marker date="1534322706000" expanded="true" signature="326:345" ph="CREATE DATAB... zoo" />
+              <marker date="1534322706000" expanded="true" signature="487:506" ph="create datab... zoo" />
+              <marker date="1534322706000" expanded="true" signature="651:668" ph="create table... user" />
+              <marker date="1534322706000" expanded="true" signature="697:710" ph="drop databas... " />
+              <marker date="1534322706000" expanded="true" signature="833:1871" ph="CREATE TABLE... user" />
+              <marker date="1534322706000" expanded="true" signature="1995:2854" ph="CREATE TABLE... user_address" />
+              <marker date="1534322706000" expanded="true" signature="2972:3843" ph="CREATE TABLE... company" />
+              <marker date="1534322706000" expanded="true" signature="3972:4468" ph="CREATE TABLE... user_company" />
+              <marker date="1534322706000" expanded="true" signature="4490:4614" ph="ALTER TABLE `user`... " />
+              <marker date="1534322706000" expanded="true" signature="4616:4732" ph="ALTER TABLE `user`... " />
+              <marker date="1534322706000" expanded="true" signature="4734:4831" ph="ALTER TABLE `user`... " />
+              <marker date="1534322706000" expanded="true" signature="4847:4974" ph="ALTER TABLE `user`... " />
+              <marker date="1534322706000" expanded="true" signature="4991:5131" ph="ALTER TABLE `user`... " />
+              <marker date="1534322706000" expanded="true" signature="5141:5175" ph="ALTER TABLE `user`... " />
+              <marker date="1534322706000" expanded="true" signature="5185:5221" ph="ALTER TABLE `user`... " />
+              <marker date="1534322706000" expanded="true" signature="5235:5269" ph="ALTER TABLE `user`... " />
+              <marker date="1534322706000" expanded="true" signature="5301:5421" ph="ALTER TABLE `user`... " />
+              <marker date="1534322706000" expanded="true" signature="5434:5486" ph="ALTER TABLE `user_address`... " />
+              <marker date="1534322706000" expanded="true" signature="5498:5588" ph="ALTER TABLE `user`... " />
+              <marker date="1534322706000" expanded="true" signature="5781:5833" ph="SELECT num+1... test" />
+              <marker date="1534322706000" expanded="true" signature="5844:5900" ph="SELECT a=1, test" />
+              <marker date="1534322706000" expanded="true" signature="5902:5953" ph="SELECT * FRO... test" />
+              <marker date="1534322706000" expanded="true" signature="5955:6001" ph="SELECT * FRO... test" />
+              <marker date="1534322706000" expanded="true" signature="6003:6043" ph="SELECT * FRO... test" />
+              <marker date="1534322706000" expanded="true" signature="6045:6089" ph="SELECT * FRO... test" />
+              <marker date="1534322706000" expanded="true" signature="6091:6124" ph="SELECT least... test" />
+              <marker date="1534322706000" expanded="true" signature="6126:6162" ph="SELECT great... test" />
+              <marker date="1534322706000" expanded="true" signature="6173:6213" ph="SELECT * FRO... test" />
+              <marker date="1534322706000" expanded="true" signature="6238:6291" ph="SELECT * FRO... test" />
+              <marker date="1534322706000" expanded="true" signature="6302:6334" ph="SELECT * FRO... test" />
+              <marker date="1534322706000" expanded="true" signature="6337:6369" ph="SELECT * FRO... test" />
+              <marker date="1534322706000" expanded="true" signature="6372:6404" ph="SELECT * FRO... test" />
+              <marker date="1534322706000" expanded="true" signature="6407:6440" ph="SELECT * FRO... test" />
+              <marker date="1534322706000" expanded="true" signature="6442:6465" ph="SELECT a&lt;&lt;2 test" />
+              <marker date="1534322706000" expanded="true" signature="6467:6490" ph="SELECT a&gt;&gt;2 test" />
+            </folding>
           </first_editor>
           <second_editor />
         </state>
