@@ -56,13 +56,13 @@
   git pull origin master
   ```
   
- # 如何忽略.idea目录的提交
- ```
- .gitignore 添加.idea/
- git rm -r --cached .idea
- git commit -m "edit"
- git push
- ```
+  # 如何忽略.idea目录的提交
+  ```
+  .gitignore 添加.idea/
+  git rm -r --cached .idea
+  git commit -m "edit"
+  git push
+  ```
   
 
 
