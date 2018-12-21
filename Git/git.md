@@ -49,14 +49,14 @@
   
   ```
   
-  # 如果远程分支与本地分支没有关联
+  ###### 如果远程分支与本地分支没有关联
   ```
   git branch --set-upstream-to=origin/master  master
   git push origin master
   git pull origin master
   ```
   
-  # 如何忽略.idea目录的提交
+  ###### 如何忽略.idea目录的提交
   ```
   .gitignore 添加.idea/
   git rm -r --cached .idea
