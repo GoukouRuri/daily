@@ -11,6 +11,7 @@ update user set host = '%' where user = 'root' and host='localhost';
 grant all privileges on *.* to 'root'@'%' identified by '你设置的密码' WITH GRANT OPTION; 
 FLUSH PRIVILEGES;
 重启mysql
+sudo /etc/init.d/mysqld restart
 ```
 
   - 查看3306监听状况
