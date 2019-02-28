@@ -10,7 +10,5 @@ http://idea.lanyus.com/
 
 ###### vps在centos7 64位下搭建脚本
 ```bash
-wget --no-check-certificate https://raw.githubusercontent.com/quniu/shadowsocks-all/master/install/shadowsocks-all.sh
-chmod +x shadowsocks-all.sh
-./shadowsocks-all.sh 2>&1 | tee shadowsocksR.log
+wget --no-check-certificate -O shadowsocks-libev.sh https://raw.githubusercontent.com/uxh/shadowsocks_bash/master/shadowsocks-libev.sh && bash shadowsocks-libev.sh
 ```
