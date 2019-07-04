@@ -8,7 +8,7 @@
     `$("#foo").html();`  jquery对象是jquery独有的,$("#foo")为jqeury对象,如果是jquery对象就可以使用jquery里的方法了,但无法使用DOM里的任何方法
     
     `document.getElementById("foo").innerHtml();`  DOM对象无法使用jquery里的方法
-    
+  
 * jquery对象和DOM对象相互转化
 
   - 定义变量
@@ -40,7 +40,7 @@
   - jquery库在其他库之后加载
   
    `jQuery.noConflict();`   // 将$移交给其他库，jquery则使用jQeury来引用自身
-   
+  
   - 其他库在jquery之后加载
   
     $已经在其他库时，jquery则使用jQeury来引用自身
@@ -123,11 +123,13 @@
   - `event.pageX()和event.pageY()`  获取光标相对于页面的x坐标和y坐标
   - `event.which()` 获取那个按键触发的
 * 移除事件
+  
   - unbind('事件类型')
   
 * 模拟事件
+  
   - trigger()
-    
+  
 * 事件的命名空间,方便事件的管理
 
 * jquery中的动画
@@ -155,7 +157,7 @@
     - 
   - 选项卡
   - 网页换肤
-  
+
 > ### jquery与ajax应用
 
   - load()方法从web服务器获取静态的数据文件
@@ -164,7 +166,7 @@
   - 序列化serialize()和$.param()方法
   - jquery中ajax的全局事件
   - 
-  
+
 > ### jquery官方插件http://plugins.jquery.com
 
   - 动画插件jquery.color.js
@@ -172,13 +174,13 @@
   - 表单验证插件jquery.validate.js或者jquery.metadata.js
   - 表单插件jquery.form.js
   - 动态绑定事件插件(不管是初次加载还是ajax等动态加载出的html元素,只有匹配都会被绑定)
- 
+
 > ### jquery扩展
 
   - $.fn.extend({})
   - jQuery.extend()
- 
-  
- 
 
   
+
+
+
