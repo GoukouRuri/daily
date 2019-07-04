@@ -1,4 +1,4 @@
-### markdown文件转html(两个结合使用)
+### markdown文件转html
 
   - pandoc
   - typora
