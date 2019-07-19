@@ -2,8 +2,191 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c8b28eb-4793-40b8-9ca9-c4c20afee0e5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/v1/Apache.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/v1/PDO/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/v1/PDO/db.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/v1/PDO/log.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/v1/jquery.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/v1/mysqli.md" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1123/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Git/markdown.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Javascript/Jquery/Jquery学习整理.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Apache/lamp编译安装.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/Shell.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/archiving.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/array.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/async.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/command.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/alias.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/awk.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/cal.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/cat.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/clear.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/cp.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/cut.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/date.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/df.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/du.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/echo.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/egrep.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/export.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/file.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/fmt.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/grep.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/gunzip.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/gzcat.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/gzip.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/kill.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/killall.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/last.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/lpq.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/lpr.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/nl.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/ps.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/sed.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/sort.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/tr.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/uname.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/uniq.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/uptime.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/w.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/wc.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/whereis.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/which.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/commands/who.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/error.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/expansion.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/file-operation.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/file.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/hardware.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/host.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/intro.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/loop.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/math.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/named-pipe.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/option.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/process.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/programming/basic.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/programming/condition.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/programming/function.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/programming/variable.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/prompt.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/readline.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/references.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/regex.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/session.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/startup.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/stdio.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/system.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/text.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/time.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Bash Shell/user.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Docker/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Docker/img/logo.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/Nginx/Lnmp编译安装.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/apache/Apache.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/centos/start.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Linux/nginx/Nginx.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Mysql/Collection/探索sql注入解决方案.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Mysql/Command.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Mysql/Mysqli/mysqli.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Mysql/Notice.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Mysql/PDO/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Mysql/PDO/db.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Mysql/PDO/log.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Mysql/Quesetion.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vue/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webpack/README.md" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Basics/Home.md" afterPath="$PROJECT_DIR$/v1/Basics/Home.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Basics/function.md" afterPath="$PROJECT_DIR$/v1/Basics/function.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Basics/syntax.md" afterPath="$PROJECT_DIR$/v1/Basics/syntax.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Collection/Html转wordOrPdf.md" afterPath="$PROJECT_DIR$/v1/Collection/Html转wordOrPdf.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Collection/PHP处理密码的几种方式.md" afterPath="$PROJECT_DIR$/v1/Collection/PHP处理密码的几种方式.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Collection/php合理计算数值的方法.md" afterPath="$PROJECT_DIR$/v1/Collection/php合理计算数值的方法.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Collection/php定时任务.md" afterPath="$PROJECT_DIR$/v1/Collection/php定时任务.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Collection/上传图片接口.md" afterPath="$PROJECT_DIR$/v1/Collection/上传图片接口.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Collection/几个魔术方法常用的实例.md" afterPath="$PROJECT_DIR$/v1/Collection/几个魔术方法常用的实例.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Collection/判断是否是移动端请求.md" afterPath="$PROJECT_DIR$/v1/Collection/判断是否是移动端请求.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Collection/常见报错解决思路.md" afterPath="$PROJECT_DIR$/v1/Collection/常见报错解决思路.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Collection/短信对接示范.markdown" afterPath="$PROJECT_DIR$/v1/Collection/短信对接示范.markdown" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Collection/解决编码问题(html,json,php).md" afterPath="$PROJECT_DIR$/v1/Collection/解决编码问题(html,json,php).md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Collection/过滤请求参数.md" afterPath="$PROJECT_DIR$/v1/Collection/过滤请求参数.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Collection/远程通信.md" afterPath="$PROJECT_DIR$/v1/Collection/远程通信.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/Laravel/Blade.md" afterPath="$PROJECT_DIR$/v1/Framework/Laravel/Blade.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/Laravel/Commands.md" afterPath="$PROJECT_DIR$/v1/Framework/Laravel/Commands.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/Laravel/Composer.md" afterPath="$PROJECT_DIR$/v1/Framework/Laravel/Composer.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/Laravel/Config.md" afterPath="$PROJECT_DIR$/v1/Framework/Laravel/Config.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/Laravel/Container.md" afterPath="$PROJECT_DIR$/v1/Framework/Laravel/Container.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/Laravel/Controller.md" afterPath="$PROJECT_DIR$/v1/Framework/Laravel/Controller.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/Laravel/Correct.md" afterPath="$PROJECT_DIR$/v1/Framework/Laravel/Correct.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/Laravel/Database.md" afterPath="$PROJECT_DIR$/v1/Framework/Laravel/Database.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/Laravel/Function.md" afterPath="$PROJECT_DIR$/v1/Framework/Laravel/Function.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/Laravel/Middleware.md" afterPath="$PROJECT_DIR$/v1/Framework/Laravel/Middleware.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/Laravel/Permission.md" afterPath="$PROJECT_DIR$/v1/Framework/Laravel/Permission.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/Laravel/Project.md" afterPath="$PROJECT_DIR$/v1/Framework/Laravel/Project.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/Laravel/Repositories.md" afterPath="$PROJECT_DIR$/v1/Framework/Laravel/Repositories.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/Laravel/Request.md" afterPath="$PROJECT_DIR$/v1/Framework/Laravel/Request.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/Laravel/Route.md" afterPath="$PROJECT_DIR$/v1/Framework/Laravel/Route.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/Laravel/Vagrant.md" afterPath="$PROJECT_DIR$/v1/Framework/Laravel/Vagrant.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/ThinkPHP/function.php" afterPath="$PROJECT_DIR$/v1/Framework/ThinkPHP/function.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/autoloading.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/autoloading.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/bootstrap.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/bootstrap.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/config.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/config.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/controllers.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/controllers.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/conventions.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/conventions.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/cookies.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/cookies.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/debugging.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/debugging.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/errors.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/errors.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/extension.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/extension.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/files.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/files.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/files/classes.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/files/classes.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/files/config.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/files/config.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/files/i18n.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/files/i18n.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/files/messages.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/files/messages.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/flow.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/flow.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/fragments.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/fragments.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/helpers.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/helpers.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/index.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/index.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/install.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/install.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/menu.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/menu.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/modules.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/modules.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/mvc.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/mvc.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/mvc/controllers.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/mvc/controllers.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/mvc/models.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/mvc/models.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/mvc/views.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/mvc/views.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/profiling.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/profiling.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/requests.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/requests.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/routing.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/routing.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/security.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/security.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/security/cookies.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/security/cookies.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/security/database.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/security/database.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/security/deploying.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/security/deploying.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/security/encryption.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/security/encryption.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/security/validation.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/security/validation.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/security/xss.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/security/xss.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/sessions.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/sessions.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/tips.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/tips.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/tutorials/clean-urls.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/tutorials/clean-urls.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/tutorials/error-pages.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/tutorials/error-pages.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/tutorials/git.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/tutorials/git.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/tutorials/hello-world.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/tutorials/hello-world.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/tutorials/library-kohana.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/tutorials/library-kohana.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/tutorials/sharing-kohana.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/tutorials/sharing-kohana.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/tutorials/simple-mvc.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/tutorials/simple-mvc.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/upgrading.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/upgrading.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1123/Framework/kohana/快速入门.md" afterPath="$PROJECT_DIR$/v1/Framework/kohana/快速入门.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Helpers/phpstorm.markdown" afterPath="$PROJECT_DIR$/v1/phpstorm.markdown" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Helpers/sublimetext2.markdown" afterPath="$PROJECT_DIR$/v1/sublimetext2.markdown" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Helpers/tools.markdown" afterPath="$PROJECT_DIR$/v1/tools.markdown" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Linux/Aliyun/阿里云配置允许远程访问mysql.md" afterPath="$PROJECT_DIR$/v1/阿里云配置允许远程访问mysql.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Linux/linix初步入门.md" afterPath="$PROJECT_DIR$/v1/linix初步入门.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Linux/php扩展编译.md" afterPath="$PROJECT_DIR$/v1/php扩展编译.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Linux/php配置项修改.md" afterPath="$PROJECT_DIR$/v1/php配置项修改.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Redis/README.md" afterPath="$PROJECT_DIR$/v1/redis.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/git/README.md" afterPath="$PROJECT_DIR$/v1/git.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mysql/Command.md" afterPath="$PROJECT_DIR$/Mysql/Command.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,51 +201,72 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Command.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Mysql/Command.md">
+      <file leaf-file-name="redis.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/v1/redis.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="731">
-                <caret line="189" column="11" lean-forward="true" selection-start-line="189" selection-start-column="11" selection-end-line="189" selection-end-column="11" />
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-456">
+                <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Apache.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/v1/Apache.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-1349">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                 <folding>
-                  <marker date="1534322706000" expanded="true" signature="225:244" ph="CREATE DATAB... zoo" />
-                  <marker date="1534322706000" expanded="true" signature="272:289" ph="DROP DATABAS... " />
-                  <marker date="1534322706000" expanded="true" signature="326:345" ph="CREATE DATAB... zoo" />
-                  <marker date="1534322706000" expanded="true" signature="487:506" ph="create datab... zoo" />
-                  <marker date="1534322706000" expanded="true" signature="651:668" ph="create table... user" />
-                  <marker date="1534322706000" expanded="true" signature="697:710" ph="drop databas... " />
-                  <marker date="1534322706000" expanded="true" signature="833:1871" ph="CREATE TABLE... user" />
-                  <marker date="1534322706000" expanded="true" signature="1995:2854" ph="CREATE TABLE... user_address" />
-                  <marker date="1534322706000" expanded="true" signature="2972:3843" ph="CREATE TABLE... company" />
-                  <marker date="1534322706000" expanded="true" signature="3972:4468" ph="CREATE TABLE... user_company" />
-                  <marker date="1534322706000" expanded="true" signature="4490:4614" ph="ALTER TABLE `user`... " />
-                  <marker date="1534322706000" expanded="true" signature="4616:4732" ph="ALTER TABLE `user`... " />
-                  <marker date="1534322706000" expanded="true" signature="4734:4831" ph="ALTER TABLE `user`... " />
-                  <marker date="1534322706000" expanded="true" signature="4847:4974" ph="ALTER TABLE `user`... " />
-                  <marker date="1534322706000" expanded="true" signature="4991:5131" ph="ALTER TABLE `user`... " />
-                  <marker date="1534322706000" expanded="true" signature="5141:5175" ph="ALTER TABLE `user`... " />
-                  <marker date="1534322706000" expanded="true" signature="5185:5221" ph="ALTER TABLE `user`... " />
-                  <marker date="1534322706000" expanded="true" signature="5235:5269" ph="ALTER TABLE `user`... " />
-                  <marker date="1534322706000" expanded="true" signature="5301:5421" ph="ALTER TABLE `user`... " />
-                  <marker date="1534322706000" expanded="true" signature="5434:5486" ph="ALTER TABLE `user_address`... " />
-                  <marker date="1534322706000" expanded="true" signature="5498:5588" ph="ALTER TABLE `user`... " />
-                  <marker date="1534322706000" expanded="true" signature="5781:5833" ph="SELECT num+1... test" />
-                  <marker date="1534322706000" expanded="true" signature="5844:5900" ph="SELECT a=1, test" />
-                  <marker date="1534322706000" expanded="true" signature="5902:5953" ph="SELECT * FRO... test" />
-                  <marker date="1534322706000" expanded="true" signature="5955:6001" ph="SELECT * FRO... test" />
-                  <marker date="1534322706000" expanded="true" signature="6003:6043" ph="SELECT * FRO... test" />
-                  <marker date="1534322706000" expanded="true" signature="6045:6089" ph="SELECT * FRO... test" />
-                  <marker date="1534322706000" expanded="true" signature="6091:6124" ph="SELECT least... test" />
-                  <marker date="1534322706000" expanded="true" signature="6126:6162" ph="SELECT great... test" />
-                  <marker date="1534322706000" expanded="true" signature="6173:6213" ph="SELECT * FRO... test" />
-                  <marker date="1534322706000" expanded="true" signature="6238:6291" ph="SELECT * FRO... test" />
-                  <marker date="1534322706000" expanded="true" signature="6302:6334" ph="SELECT * FRO... test" />
-                  <marker date="1534322706000" expanded="true" signature="6337:6369" ph="SELECT * FRO... test" />
-                  <marker date="1534322706000" expanded="true" signature="6372:6404" ph="SELECT * FRO... test" />
-                  <marker date="1534322706000" expanded="true" signature="6407:6440" ph="SELECT * FRO... test" />
-                  <marker date="1534322706000" expanded="true" signature="6442:6465" ph="SELECT a&lt;&lt;2 test" />
-                  <marker date="1534322706000" expanded="true" signature="6467:6490" ph="SELECT a&gt;&gt;2 test" />
+                  <marker date="1555465847000" expanded="true" signature="180:595" ph="&lt;VirtualHost *:80&gt;" />
+                  <marker date="1555465847000" expanded="true" signature="606:1059" ph="&lt;VirtualHost *:80&gt;" />
                 </folding>
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="phpstorm.markdown" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/v1/phpstorm.markdown">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sublimetext2.markdown" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/v1/sublimetext2.markdown">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tools.markdown" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/v1/tools.markdown">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+                <folding />
               </first_editor>
               <second_editor />
             </state>
@@ -78,6 +282,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Mysql/Command.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -90,8 +295,8 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1057" />
+    <option name="width" value="1280" />
+    <option name="height" value="734" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -108,6 +313,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -131,18 +337,77 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Mysql" />
+              <option name="myItemId" value="v1" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/v1" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -164,17 +429,18 @@
       <workItem from="1516632180390" duration="290000" />
       <workItem from="1534322645855" duration="679000" />
       <workItem from="1534380837557" duration="35000" />
+      <workItem from="1563500768570" duration="549000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1786000" />
+    <option name="totallyTimeSpent" value="2335000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="734" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1773163" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18012924" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -204,51 +470,373 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/mysql/Command.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DevelopTools/phpstorm.md" />
-    <entry file="file://$PROJECT_DIR$/Mysql/Command.md">
+    <entry file="file://$PROJECT_DIR$/v1/Collection/几个魔术方法常用的实例.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding>
+              <marker date="1562233024000" expanded="true" signature="44:93" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="106:195" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="138:193" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="467:502" ph=" php实现类的后置方法,比如执行一些方法默认执行一些操作  ..." />
+              <marker date="1562233024000" expanded="true" signature="517:958" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="568:580" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="615:627" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="662:674" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="792:956" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="1006:1033" ph=" 利用魔术方法__call模拟数据库连贯操作  ..." />
+              <marker date="1562233024000" expanded="true" signature="1046:1688" ph="{...}" />
+              <marker date="1562233024000" expanded="true" signature="1079:1177" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="1221:1507" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="1317:1378" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="1384:1474" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="1536:1683" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="1754:1766" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="1782:1795" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="1811:1813" ph="..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1/Collection/常见报错解决思路.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1/Collection/短信对接示范.markdown">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-361">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1/Collection/解决编码问题(html,json,php).md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1/Collection/过滤请求参数.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding>
+              <marker date="1562233024000" expanded="true" signature="27:134" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="170:332" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="404:1124" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="506:1102" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="545:664" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="685:758" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="899:981" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="989:1071" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="1161:1362" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="1420:8468" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="1460:1981" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="1660:1941" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="2000:2155" ph="  ..." />
+              <marker date="1562233024000" expanded="true" signature="2208:2577" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="2596:2716" ph="  ..." />
+              <marker date="1562233024000" expanded="true" signature="2767:3016" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="2890:3009" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="3035:3171" ph="  ..." />
+              <marker date="1562233024000" expanded="true" signature="3207:3459" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="3478:3608" ph="  ..." />
+              <marker date="1562233024000" expanded="true" signature="3647:3878" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="3679:3787" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="3720:3777" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="3795:3849" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="3897:4039" ph="  ..." />
+              <marker date="1562233024000" expanded="true" signature="4075:4464" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="4357:4436" ph="//..." />
+              <marker date="1562233024000" expanded="true" signature="4483:4615" ph="  ..." />
+              <marker date="1562233024000" expanded="true" signature="4654:4862" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="4797:4830" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="4881:5009" ph="  ..." />
+              <marker date="1562233024000" expanded="true" signature="5052:5214" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="5233:5358" ph="  ..." />
+              <marker date="1562233024000" expanded="true" signature="5405:5477" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="5496:5682" ph="  ..." />
+              <marker date="1562233024000" expanded="true" signature="5737:6147" ph="{...}" />
+              <marker date="1562233024000" expanded="true" signature="5789:6111" ph="{...}" />
+              <marker date="1562233024000" expanded="true" signature="5833:6009" ph="{...}" />
+              <marker date="1562233024000" expanded="true" signature="5896:5995" ph="{...}" />
+              <marker date="1562233024000" expanded="true" signature="6026:6101" ph="{...}" />
+              <marker date="1562233024000" expanded="true" signature="6165:6300" ph="  ..." />
+              <marker date="1562233024000" expanded="true" signature="6339:7355" ph="{...}" />
+              <marker date="1562233024000" expanded="true" signature="7373:7504" ph="  ..." />
+              <marker date="1562233024000" expanded="true" signature="7543:8452" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1/Collection/远程通信.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-4218">
+            <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+            <folding>
+              <marker date="1562233024000" expanded="true" signature="1309:1362" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="1773:2034" ph="//..." />
+              <marker date="1562233024000" expanded="true" signature="2281:2530" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="3030:3224" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="3965:4484" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="4549:4880" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="4950:5466" ph="{...}" />
+              <marker date="1562233024000" expanded="false" signature="5960:6021" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="6062:9083" ph="{...}" />
+              <marker date="1562233024000" expanded="true" signature="6092:6583" ph="{...}" />
+              <marker date="1562233024000" expanded="true" signature="6627:8099" ph="{...}" />
+              <marker date="1562233024000" expanded="true" signature="6655:6759" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="7145:7552" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="7560:7953" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="7659:7944" ph="//..." />
+              <marker date="1562233024000" expanded="true" signature="8116:9078" ph="..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1/Collection/判断是否是移动端请求.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding>
+              <marker date="1562233024000" expanded="true" signature="34:1511" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="128:162" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="250:364" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="475:1028" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="512:813" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="976:1018" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="1107:1483" ph="..." />
+              <marker date="1562233024000" expanded="true" signature="1431:1473" ph="..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1/git.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1/PDO/db.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1140">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1/PDO/log.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-457">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1/mysqli.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-209">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding>
+              <marker date="1555465847000" expanded="true" signature="51:1221" ph="..." />
+              <marker date="1555465847000" expanded="true" signature="121:861" ph="{...}" />
+              <marker date="1555465847000" expanded="true" signature="156:332" ph="..." />
+              <marker date="1555465847000" expanded="true" signature="481:553" ph="..." />
+              <marker date="1555465847000" expanded="true" signature="796:854" ph="..." />
+              <marker date="1555465847000" expanded="true" signature="894:1220" ph="{...}" />
+              <marker date="1555465847000" expanded="true" signature="976:1034" ph="..." />
+              <marker date="1555465847000" expanded="true" signature="1111:1149" ph="..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1/jquery.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="228">
+            <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/Command.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="731">
-            <caret line="189" column="11" lean-forward="true" selection-start-line="189" selection-start-column="11" selection-end-line="189" selection-end-column="11" />
+          <first_editor relative-caret-position="19">
+            <caret line="189" column="11" lean-forward="false" selection-start-line="189" selection-start-column="11" selection-end-line="189" selection-end-column="11" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/Collection/探索sql注入解决方案.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/Quesetion.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/Notice.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git/markdown.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1/redis.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-456">
+            <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Linux/Nginx/Nginx.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Linux/Nginx/Lnmp编译安装.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-228">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1/Apache.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-1349">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             <folding>
-              <marker date="1534322706000" expanded="true" signature="225:244" ph="CREATE DATAB... zoo" />
-              <marker date="1534322706000" expanded="true" signature="272:289" ph="DROP DATABAS... " />
-              <marker date="1534322706000" expanded="true" signature="326:345" ph="CREATE DATAB... zoo" />
-              <marker date="1534322706000" expanded="true" signature="487:506" ph="create datab... zoo" />
-              <marker date="1534322706000" expanded="true" signature="651:668" ph="create table... user" />
-              <marker date="1534322706000" expanded="true" signature="697:710" ph="drop databas... " />
-              <marker date="1534322706000" expanded="true" signature="833:1871" ph="CREATE TABLE... user" />
-              <marker date="1534322706000" expanded="true" signature="1995:2854" ph="CREATE TABLE... user_address" />
-              <marker date="1534322706000" expanded="true" signature="2972:3843" ph="CREATE TABLE... company" />
-              <marker date="1534322706000" expanded="true" signature="3972:4468" ph="CREATE TABLE... user_company" />
-              <marker date="1534322706000" expanded="true" signature="4490:4614" ph="ALTER TABLE `user`... " />
-              <marker date="1534322706000" expanded="true" signature="4616:4732" ph="ALTER TABLE `user`... " />
-              <marker date="1534322706000" expanded="true" signature="4734:4831" ph="ALTER TABLE `user`... " />
-              <marker date="1534322706000" expanded="true" signature="4847:4974" ph="ALTER TABLE `user`... " />
-              <marker date="1534322706000" expanded="true" signature="4991:5131" ph="ALTER TABLE `user`... " />
-              <marker date="1534322706000" expanded="true" signature="5141:5175" ph="ALTER TABLE `user`... " />
-              <marker date="1534322706000" expanded="true" signature="5185:5221" ph="ALTER TABLE `user`... " />
-              <marker date="1534322706000" expanded="true" signature="5235:5269" ph="ALTER TABLE `user`... " />
-              <marker date="1534322706000" expanded="true" signature="5301:5421" ph="ALTER TABLE `user`... " />
-              <marker date="1534322706000" expanded="true" signature="5434:5486" ph="ALTER TABLE `user_address`... " />
-              <marker date="1534322706000" expanded="true" signature="5498:5588" ph="ALTER TABLE `user`... " />
-              <marker date="1534322706000" expanded="true" signature="5781:5833" ph="SELECT num+1... test" />
-              <marker date="1534322706000" expanded="true" signature="5844:5900" ph="SELECT a=1, test" />
-              <marker date="1534322706000" expanded="true" signature="5902:5953" ph="SELECT * FRO... test" />
-              <marker date="1534322706000" expanded="true" signature="5955:6001" ph="SELECT * FRO... test" />
-              <marker date="1534322706000" expanded="true" signature="6003:6043" ph="SELECT * FRO... test" />
-              <marker date="1534322706000" expanded="true" signature="6045:6089" ph="SELECT * FRO... test" />
-              <marker date="1534322706000" expanded="true" signature="6091:6124" ph="SELECT least... test" />
-              <marker date="1534322706000" expanded="true" signature="6126:6162" ph="SELECT great... test" />
-              <marker date="1534322706000" expanded="true" signature="6173:6213" ph="SELECT * FRO... test" />
-              <marker date="1534322706000" expanded="true" signature="6238:6291" ph="SELECT * FRO... test" />
-              <marker date="1534322706000" expanded="true" signature="6302:6334" ph="SELECT * FRO... test" />
-              <marker date="1534322706000" expanded="true" signature="6337:6369" ph="SELECT * FRO... test" />
-              <marker date="1534322706000" expanded="true" signature="6372:6404" ph="SELECT * FRO... test" />
-              <marker date="1534322706000" expanded="true" signature="6407:6440" ph="SELECT * FRO... test" />
-              <marker date="1534322706000" expanded="true" signature="6442:6465" ph="SELECT a&lt;&lt;2 test" />
-              <marker date="1534322706000" expanded="true" signature="6467:6490" ph="SELECT a&gt;&gt;2 test" />
+              <marker date="1555465847000" expanded="true" signature="180:595" ph="&lt;VirtualHost *:80&gt;" />
+              <marker date="1555465847000" expanded="true" signature="606:1059" ph="&lt;VirtualHost *:80&gt;" />
             </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1/phpstorm.markdown">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1/sublimetext2.markdown">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1/tools.markdown">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>
