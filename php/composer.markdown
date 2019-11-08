@@ -55,7 +55,8 @@ example:
   
   ```text
   为什么不用composer update, 因为如果有composer.lock文件, 无论过去了多久，大家都能拉到相同的依赖, 不会对依赖随意升级.
-  如果没有composer.lock文件, 等同于composer update, composer会去读取composer.json中指定的依赖，去分析他们，并且去拉取符合条件最新版本的依赖。然后他会把所拉取到的依赖放入vendor目录下，并且把所有拉取的依赖的精确版本号写入composer.lock文件中
+  如果没有composer.lock文件, 等同于composer update, composer会去读取composer.json中指定的依赖，去分析他们，并且去拉取符合条件最新版本的依赖。
+  然后他会把所拉取到的依赖放入vendor目录下，并且把所有拉取的依赖的精确版本号写入composer.lock文件中
 
   ```
    
