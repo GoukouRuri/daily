@@ -16,4 +16,7 @@ $unique_key = uniqid(md5(microtime(true)),true)  // 高并发和循环条件下�
 $session_key = session_create_id(); // php7.1以上新增生成session id的函数 高并发也不重复
 
 
-
+# 常量
+define("AAA", '123'); // 定义一个常量
+constant("AAA");    // 获取常量的值
+defined("AAA");    // 检查常量是否定义或者存在 返回true或false 
