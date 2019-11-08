@@ -77,6 +77,18 @@ if (flock($fp , LOCK_EX)) {
 fclose($fp);
 
 
+# 文件的读取
+
+// 第一种 file_get_contents (推荐性能比其他方式好)
+$file = "test.txt";
+if (file_exists($file)) {
+	// 如果文件存在
+	$str = file_get_contents($file);   // 从文件中读取内容
+	$str = str_replace("\r\n", "<br/>", $str);
+	echo $str;
+}
+
+
 
 
 
