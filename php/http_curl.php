@@ -39,7 +39,6 @@ class CurlServer {
         	$res = $this->post($url, $data);
         }
         
-
         if ($res && $resp = json_decode($res, true)) {
             return $resp;
         } else {
