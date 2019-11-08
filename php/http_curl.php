@@ -19,7 +19,7 @@ class CurlServer {
     }
 
     /**
-     * 发送get请求
+     * 发送远程api请求
      * @param  [type] $url  [description]
      * @param  array  $data [description]
      * @return [type]       [description]
