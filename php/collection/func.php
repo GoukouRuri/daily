@@ -20,3 +20,11 @@ $session_key = session_create_id(); // php7.1以上新增生成session id的函�
 define("AAA", '123'); // 定义一个常量
 constant("AAA");    // 获取常量的值
 defined("AAA");    // 检查常量是否定义或者存在 返回true或false 
+
+
+# 格式化字符串写入变量中
+$number = 9;
+$str = "Beijing";
+$txt = vsprintf("There are %u million bicycles in %s.", array($number,$str));
+$txt = sprintf("There are %u million bicycles in %s.", $number, $str);
+$txt = printf("There are %u million bicycles in %s.", $number, $str);
