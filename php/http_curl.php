@@ -117,12 +117,12 @@ class CurlServer {
      * @return [type] [description]
      */
     public function checkHash()
-	{
-		$data = $_REQUEST;
-		$hash = trim($_REQUEST['hash']);
-	    unset($data['hash']);
-	    ksort($data);
-	    $_hash = md5(http_build_query($data) . self::API_HASH_KEY);
-	    return $_hash == $hash ? true : false;
-	}
+    {
+        $data = $_REQUEST;
+        $hash = trim($_REQUEST['hash']);
+        unset($data['hash']);
+        ksort($data);
+        $_hash = md5(http_build_query($data) . self::API_HASH_KEY);
+        return $_hash == $hash ? true : false;
+    }
 }
