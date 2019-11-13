@@ -37,6 +37,17 @@ $file = fopen("test.txt","w");
 echo fprintf($file,"There are %u million bicycles in %s.",$number,$str); // 返回40(字符数)
 echo vfprintf($file,"There are %u million bicycles in %s.",array($number,$str));  // 返回40(字符数)
 
+# 字母大小写转换
+// 把每个单词的首字符转换为大写
+echo ucwords("hello world");  // Hello World!
+// 把字符串中的首字符转换为大写
+echo ucfirst("hello world!"); // Hello world!
+// 把字符串中的首字符转换为小写
+echo lcfirst("Hello world!"); // hello world!
+// 把所有字符转换为大写
+echo strtoupper("Hello WORLD!"); // HELLO WORLD
+// 把所有字符转换为小写
+echo strtolower("Hello WORLD!"); // hello world
 
 
 
