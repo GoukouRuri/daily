@@ -49,6 +49,20 @@ echo strtoupper("Hello WORLD!"); // HELLO WORLD
 // 把所有字符转换为小写
 echo strtolower("Hello WORLD!"); // hello world
 
+# 字符串过滤函数
+// 从字符串的两端删除空白字符和其他预定义字符,第二参数不传默认去除两端空白字符. 
+$str = " Hello World! ";
+echo trim($str);  
+// 从字符串左侧删除空白字符和其他预定义字符,第二参数不传默认去除两端空白字符. 
+$str = " Hello World! ";
+echo ltrim($str);  
+// 从字符串右侧删除空白字符和其他预定义字符,第二参数不传默认去除两端空白字符. 
+$str = " Hello World! ";
+echo rtrim($str); 
+// 剥去字符串中的 HTML、XML 以及 PHP 的标签, 包括注释, 如果要保留某些标签, 只需要将多个标签用空格分隔后写到strip_tags的第二个参数中
+$str = "Hello <b>world!</b>";
+echo strip_tags($str);
+
 
 
 
