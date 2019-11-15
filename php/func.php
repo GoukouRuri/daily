@@ -64,8 +64,20 @@ $str = "Hello <b>world!</b>";
 echo strip_tags($str);
 
 # 字符串搜索函数
-// 查找 "php" 在字符串中第一次出现的位置, 如果没有找到字符串则返回 FALSE, 第二个参数必须为字符串
+// (区分大小写) 查找 "php" 在字符串中第一次出现的位置, 如果没有找到字符串则返回 FALSE, 第二个参数必须为字符串
 if (strpos("I like php!", "php") === false) {
+	echo "No php";
+}
+// (不区分大小写) 查找 "php" 在字符串中第一次出现的位置, 如果没有找到字符串则返回 FALSE, 第二个参数必须为字符串
+if (stripos("I like php!", "php") === false) {
+	echo "No php";
+}
+// (区分大小写) 查找 "php" 在字符串中最后一次出现的位置, 如果没有找到字符串则返回 FALSE, 第二个参数必须为字符串
+if (strrpos("I like php!", "php") === false) {
+	echo "No php";
+}
+// (区分大小写) 查找 "php" 在字符串中最后一次出现的位置, 如果没有找到字符串则返回 FALSE, 第二个参数必须为字符串
+if (strripos("I like php!", "php") === false) {
 	echo "No php";
 }
 
