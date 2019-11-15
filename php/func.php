@@ -82,6 +82,24 @@ if (strripos("I like php!", "php") === false) {
 }
 
 
+# 字符串转义和替换函数
+// addcslashes 在指定字符前添加反斜杠, 区分大小写, 对以下字符应用 addcslashes() 时请小心：0（NULL）, r（回车）, n（换行）, f 换页）、t（制表符）以及 v（垂直制表符）, 在 PHP 中，\0, \r, \n, \t, \f 以及 \v 是预定义的转义序列
+$str = addcslashes('Shanghai is the "biggest" city in China.', '"');  
+echo($str);    // Shanghai \is the \"biggest\" city in China.
+// addslashes 在预定义字符之前添加反斜杠的字符串, 预定义字符是单引号、双引号、反斜杠、NULL.
+$str = addslashes('Shanghai \is the "biggest" city in China.');
+echo($str);   // Shanghai \\is the \"biggest\" city in China.
+// str_replace 区分大小写, 不支持正则, 作用是将字符串替换成另外一个字符串. 多个要替换的值可以在第一个参数中使用数组, 第四个为可选参数,可以统计替换的次数, 不区分大小写用str_ireplace()
+$str = str_replace(array('\\','"'), '', 'Shanghai \is the "biggest" city in China.');
+echo($str);   // Shanghai is the biggest city in China.  将反斜杠和双引号去除
+// substr_replace 将某个字符串的一部分替换成另外一个字符串或者在字符串某一部位插入另外一个字符串. 多个字符串需要替换时第一个参数为数组形式, 第三个参数代表起始位置,默认0, 第四个参数为替换长度, 默认是与字符串长度相同, 0代表是插入
+$str = substr_replace('Shanghai \is the "biggest" city in China.', 'good', 9);
+echo($str);  // Shanghai good  第四个参数没有, 此时为替换
+$str = substr_replace('Shanghai \is the "biggest" city in China.', 'good', 9, 0);
+echo($str);  // Shanghai good\is the "biggest" city in China. 第四个参数为0, 此时为插入
+
+
+
 
 
 
