@@ -63,6 +63,12 @@ echo rtrim($str);
 $str = "Hello <b>world!</b>";
 echo strip_tags($str);
 
+# 字符串搜索函数
+// 查找 "php" 在字符串中第一次出现的位置, 如果没有找到字符串则返回 FALSE, 第二个参数必须为字符串
+if (strpos("I like php!", "php") === false) {
+	echo "No php";
+}
+
 
 
 
