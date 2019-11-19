@@ -140,7 +140,7 @@ if (preg_match("/\bweb\b/i", "PHP is the website scripting language of choice.")
 } // 执行结果: 未发现匹配的字符串
 
 
-# 数组插入和弹出元素
+# 数组相关函数
 // array_push() 函数向第一个参数的数组尾部添加一个或多个元素（入栈）, 然后返回新数组的长度, 不推荐使用.
 $a = array("red", "green");
 array_push($a, "blue", "yellow");
@@ -160,6 +160,11 @@ print_r($a); // array(3) { [0]=>string(4) "blue" [1]=>string(3) "red" [2]=>strin
 $a = array("red", "green", "blue");
 array_shift($a);
 print_r($a);
+
+// array_search() 函数在数组中搜索某个键值, 并返回对应的键名, 第三个参数为布尔型, true时表示值和类型均要匹配
+$a = array("a" => "red", "b" => "green", "c" => "blue");
+echo array_search("red", $a);
+
 
 
 
