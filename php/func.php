@@ -165,6 +165,35 @@ print_r($a);
 $a = array("a" => "red", "b" => "green", "c" => "blue");
 echo array_search("red", $a);
 
+// array_values() 函数返回一个包含给定数组中所有键值的数组, 但不保留键名, 即取出所有元素组成新的索引数组.
+$a = array("a" => "red", "b" => "green", "c" => "blue");
+print_r(array_values($a));
+
+// array_chunk() 函数把数组分割为新的数组块, 一维转二维, 二维数组中元素个数由第二个参数决定,不常用.
+$cars = array("Volvo", "BMW", "Toyota", "Honda", "Mercedes", "Opel");
+print_r(array_chunk($cars, 2));
+
+// array_column 函数返回输入二维数组中某个单一列的值组成的新的一维数组 第二个参数为取的何列做值, 第三个参数为取的何列为键
+$a = array(
+  array(
+    'id' => 5698,
+    'first_name' => 'Bill',
+    'last_name' => 'Gates',
+  ),
+  array(
+    'id' => 4767,
+    'first_name' => 'Steve',
+    'last_name' => 'Jobs',
+  )
+  array(
+    'id' => 3809,
+    'first_name' => 'Mark',
+    'last_name' => 'Zuckerberg',
+  )
+);
+
+$last_names = array_column($a, 'last_name', 'id');
+print_r($last_names);
 
 
 
