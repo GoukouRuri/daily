@@ -140,7 +140,26 @@ if (preg_match("/\bweb\b/i", "PHP is the website scripting language of choice.")
 } // 执行结果: 未发现匹配的字符串
 
 
+# 数组插入和弹出元素
+// array_push() 函数向第一个参数的数组尾部添加一个或多个元素（入栈）, 然后返回新数组的长度, 不推荐使用.
+$a = array("red", "green");
+array_push($a, "blue", "yellow");
+print_r($a);
 
+// array_pop() 函数删除数组中的最后一个元素, 并返回删除的值, 没有返回NULL.
+$a = array("red", "green", "blue");
+array_pop($a);
+print_r($a);
+
+// array_unshift() 函数用于向数组插入新元素, 新数组的值将被插入到数组的开头, 键始终0开始, 原有键如果是数字键递增, 是字符串键保持不变.
+$a = array("red", "green");
+array_unshift($a, "blue");
+print_r($a); // array(3) { [0]=>string(4) "blue" [1]=>string(3) "red" [2]=>string(5) "green"}
+
+// array_shift() 函数删除数组中第一个元素, 并返回被删除元素的值, 没有返回NULL.
+$a = array("red", "green", "blue");
+array_shift($a);
+print_r($a);
 
 
 
