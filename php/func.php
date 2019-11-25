@@ -195,6 +195,12 @@ $a = array(
 $last_names = array_column($a, 'last_name', 'id');
 print_r($last_names);
 
+// array_reverse() 函数以相反的元素顺序返回数组, 第二个参数默认true, 表示键名保留.
+$a = array(
+	"a" => "Volvo", "b" => "BMW", "c" => "Toyota"
+);
+print_r(array_reverse($a));
+
 
 
 
