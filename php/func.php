@@ -119,6 +119,10 @@ echo($str);  // Shanghai good\is the "biggest" city in China. 第四个参数为
 echo strlen("Hello World哈哈哈");  // 一个汉字3个字节, 返回字符串字节数, 并不能得到我们需要的字符串长度的真实值
 echo mb_strlen("Hello World哈哈哈"); // 一个汉字1个字节, 返回字符串字节数, 可以更好反馈字符串长度
 
+// strrev() 函数反转字符串.
+$str = strrev("I love Shanghai!");
+echo $str;    // !iahgnahS evol I
+
 # 正则匹配搜索函数 preg_match
 // 查找文本字符串"php", 模式分隔符后的"i"标记这是一个大小写不敏感的搜索
 if (preg_match("/php/i", "PHP is the web scripting language of choice.")) {
