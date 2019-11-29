@@ -1,22 +1,6 @@
 <?php
 // 常用内置函数
 
-# 返回当前 Unix 时间戳和微秒数
-$time = microtime(true); // 1376983061.08845800
-
-
-# 获取程序执行时间
-$start = microtime(true);
-$end = microtime(true);
-echo number_format($end - $start, 10, '.', '')." seconds"; // 保留十位小数 格式化输出时间差
-
-
-# 函数基于以微秒计的当前时间，生成一个唯一的 ID 
-$unique_key = uniqid();  // 5dc370092b263  (高并发和循环条件下会产生重复id)
-$unique_key = uniqid(md5(microtime(true)),true)  // 高并发和循环条件下也不会生成重复id
-$session_key = session_create_id(); // php7.1以上新增生成session id的函数 高并发也不重复
-
-
 # 常量
 define("AAA", '123'); // 定义一个常量
 constant("AAA");    // 获取常量的值
@@ -205,6 +189,74 @@ $a = array(
 );
 print_r(array_reverse($a));
 
+
+# 加密函数
+// sha1()函数计算字符串的 SHA-1 散列
+$str = "Shanghai";
+echo sha1($str);   // b99463d58a5c8372e6adbdca867428961641cb51
+
+// sha1_file()函数计算文件的 SHA-1 散列
+$filename = "test.txt";
+$sha1file = sha1_file($filename);
+echo $sha1file;
+
+// md5()函数计算字符串的 MD5 散列
+$str = "Shanghai";
+echo md5($str);   // 5466ee572bcbc75830d044e66ab429bc
+
+// md5_file()函数计算文件的 MD5 散列
+$filename = "test.txt";
+$sha1file = md5_file($filename);
+echo $sha1file;
+
+
+# 日期时间函数
+// 返回当前 Unix 时间戳和微秒数
+$time = microtime(true); // 1376983061.08845800
+
+// 获取程序执行时间
+$start = microtime(true);
+$end = microtime(true);
+echo number_format($end - $start, 10, '.', '')." seconds"; // 保留十位小数 格式化输出时间差
+
+// 函数基于以微秒计的当前时间，生成一个唯一的 ID 
+$unique_key = uniqid();  // 5dc370092b263  (高并发和循环条件下会产生重复id)
+$unique_key = uniqid(md5(microtime(true)),true)  // 高并发和循环条件下也不会生成重复id
+$session_key = session_create_id(); // php7.1以上新增生成session id的函数 高并发也不重复
+
+// date() 函数用于对日期或时间进行格式化
+$now = date("Y-m-d H:i:s"); 
+echo $now;  // 2019-11-29 14:34:25
+$now = date("w"); // 返回星期几
+echo $now;  // 5 
+
+// mktime() 函数返回日期的 Unix 时间戳, 参数分别是时分秒月日年
+$now = mktime("12", "30", "20", "11", "30", "2019");
+echo $now;  // 1575088220
+
+// strtotime() 函数用于把人类可读的字符串转换为 Unix 时间
+$time = strtotime("2019-11-29 14:34:25");
+echo $time;  // 1575009265
+
+// 获取今天开始与结束
+$start_time = date("Y-m-d 00:00:00"); // 2019-11-29 00:00:00
+$end_time = date("Y-m-d 23:59:59"); // 2019-11-29 23:59:59
+
+// 获取明天开始时间
+$time = date("Y-m-d 00:00:00", time() + 3600 * 24); // 2019-11-30 00:00:00
+$time = date("Y-m-d 00:00:00", strtotime("+1 day")); // 2019-11-30 00:00:00
+
+
+# 配置型函数
+// setlocale() 函数设置地区信息（地域信息）
+setlocale(LC_ALL, "US");
+$locale_info = localeconv();
+print_r($locale_info);
+
+// date_default_timezone_set() 函数设置用在脚本中所有日期/时间函数的默认时区
+// date_default_timezone_get() 函数获取在脚本中所有日期/时间函数的默认时区
+date_default_timezone_set("Asia/Shanghai");
+echo date_default_timezone_get();
 
 
 
