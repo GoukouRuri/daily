@@ -1,5 +1,5 @@
 ### laravel框架快速入门
-> 官方文档 https://laravel.com/docs/5.7/console-tests
+> 官方文档 https://laravel.com/docs/5.7/
 
 * [生命周期]()
 * [路由管理](https://github.com/Madoka1994/daily/tree/master/php/laravel/route)
