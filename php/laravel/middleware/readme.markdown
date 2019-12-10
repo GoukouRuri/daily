@@ -83,6 +83,21 @@ public function terminate($request, $response)
 }
 ```
 
+* 中间件中可以将路由转发
+```php
+// laravel使用Request::create和Route::dispatch($request), 尽量不要使用replace()替换参数
+$request = Request::create('games/result', 'POST', array(
+     "name"     => Session::get('name'),
+     "score"    => Session::get('score'),
+     "Level"    => Session::get('Level'),
+     "accuracy" => Session::get('accuracy'), 
+     "time"     => Session::get('time'),
+     "bouns"    => Session::get('bouns')
+));           
+$response = Route::dispatch($request);
+return $response;
+```
+
 
 
 
