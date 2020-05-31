@@ -1,1 +1,0 @@
-### Entrust - Laravel 用户权限系统解决方案[https://laravel-china.org/topics/166/entrust-laravel-user-rights-system-solution]
